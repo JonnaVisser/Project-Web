@@ -40,11 +40,11 @@ Surface plane
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 Homepage  
-<img src="images/Homepage.jpg.jpg" width="375px" alt="Homepage">
+<img src="https://github.com/JonnaVisser/Project-Web/blob/main/Images/Homepage.jpg?raw=true" width="375px" alt="Homepage">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 Travelpage  
-<img src="images/Travelpage.jpg.jpg" width="375px" alt="Tavelpage">
+<img src="https://github.com/JonnaVisser/Project-Web/blob/main/Images/Travelpage.jpg?raw=true" width="375px" alt="Tavelpage">
  
 </details>
 
