@@ -22,7 +22,7 @@ Jonna Visser
 Blauwe piste
 
 #### Je focus:
-Surface plane
+Responsive
  
 </details>
 
@@ -40,11 +40,11 @@ Surface plane
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 Homepage  
-<img src="https://github.com/JonnaVisser/Project-Web/blob/main/Images/Homepage.jpg?raw=true" width="375px" alt="Homepage">
+<img src="images/Homepage.jpg.jpg" width="375px" alt="Homepage">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 Travelpage  
-<img src="https://github.com/JonnaVisser/Project-Web/blob/main/Images/Travelpage.jpg?raw=true" width="375px" alt="Tavelpage">
+<img src="images/Travelpage.jpg.jpg" width="375px" alt="Tavelpage">
  
 </details>
 
@@ -56,13 +56,19 @@ Travelpage
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="/images/breakdownschets-%20homepage-1.jpg" width="375px" alt="breakdown van de hele pagina 1">
+<img src="/images/breakdownschets-homepage-2.jpg" width="375px" alt="breakdown van de hele pagina 2">
+<img src="/images/breakdownschets-homepage-3.jpg" width="375px" alt="breakdown van de hele pagina 3">
+<img src="/images/breakdownschets-homepage-4.jpg" width="375px" alt="breakdown van de hele pagina 4">
+<img src="/images/breakdownschets-homepage-5.jpg" width="375px" alt="breakdown van de hele pagina 5">
+<img src="/images/breakdownschets-homepage-6.jpg" width="375px" alt="breakdown van de hele pagina 6">
+<img src="/images/breakdownschets-homepage-7.jpg" width="375px" alt="breakdown van de hele pagina 7">
 
 ### dynamisch deel (bijv menu): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+<img src="/images/breakdownschets-menu.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+
 
 </details>
 
@@ -77,6 +83,8 @@ Travelpage
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik ben begonnen in me breakdownschetsen met veel divs en dit moet ik verwijderen. Ik heb aan de rest van me structuur
+veel gehad. 
 
 
 ### Agenda voor meeting
@@ -92,10 +100,9 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+De meeste divs kan je zonder gevolgen weghalen.
+Vul je html in.
+
 
 </details>
 
@@ -110,7 +117,11 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+HTML is ingevuld voor homepage en menu. De eerste stappen in CSS heb ik gedaan.
 
+ik vind het lastig om met de sections om te gaan
+de transition snap ik niet.
+Hoe moet mijn menu in de index
 
 ### Agenda voor meeting
 samen met je groepje opstellen
