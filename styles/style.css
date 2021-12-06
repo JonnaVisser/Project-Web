@@ -35,6 +35,13 @@
    url("/fonts/VerlagCondensed-Book.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: 'Verlag-Book';
+  src: url("/fonts/Verlag-Book.otf") format("otf"),
+   url("/fonts/Verlag-Book.woff") format("woff"),
+   url("/fonts/Verlag-Book.woff2") format("woff2");
+}
+
 input {
   border:1px solid #ccc;
   /* border-top-style: solid;
@@ -89,6 +96,14 @@ ul {
   list-style-image: initial;
   list-style-type: disc;
 
+}
+h2{
+  display: block; /* zorgt voor goede positie*/
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 img {
@@ -265,7 +280,7 @@ padding:0;
 display: block;
 }
 
-main section:nth-of-type(1){
+.artikelen{
   /*PADDING*/
   padding-top:0;
   padding-right: 20px;
@@ -282,7 +297,7 @@ main section:nth-of-type(1){
 }
 
 /**HOME MENU**/
-main ul:nth-of-type(1) {
+.artikelen ul:nth-of-type(1) {
   text-align: right;
   position: relative;
 
@@ -293,7 +308,7 @@ main ul:nth-of-type(1) {
   padding: 0;
 }
 
-main ul:nth-of-type(1) li:nth-of-type(1) {
+.artikelen ul:nth-of-type(1) li:nth-of-type(1) {
   width: 95.5%;
   margin-right: 4.5%;
   margin-bottom: 40px;
@@ -304,7 +319,7 @@ main ul:nth-of-type(1) li:nth-of-type(1) {
 
 }
 
-main ul:nth-of-type(1) li:nth-of-type(1) a:nth-of-type(1) img {
+.artikelen ul:nth-of-type(1) li:nth-of-type(1) a:nth-of-type(1) img {
   filter: brightness(100%);
   
   /* /* transition-property: all; */
@@ -321,7 +336,7 @@ main ul:nth-of-type(1) li:nth-of-type(1) a:nth-of-type(1) img {
   width: 100%;
 }
 
-main ul:nth-of-type(1) li:nth-of-type(1) a:nth-of-type(2) {
+.artikelen ul:nth-of-type(1) li:nth-of-type(1) a:nth-of-type(2) {
   writing-mode: horizontal-tb;
   margin: 5px 0px 5px 0px;
   right: auto;
@@ -342,7 +357,7 @@ main ul:nth-of-type(1) li:nth-of-type(1) a:nth-of-type(2) {
 
 /**UL 2**/
 
-main ul:nth-of-type(2) {
+.artikelen ul:nth-of-type(2) {
 
   /*PADDING*/
   padding-top: 0px;
@@ -367,9 +382,46 @@ main ul:nth-of-type(2) {
   justify-content: space-between;
   margin-right: -3.2%;
 }
+.postcategories {
+  line-height: 2;
+}
+.postcategories a{
+  color:var(--color-grey-text);
+  text-decoration: none;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'VerlagCondensed-Book';
+  font-weight: 400;
 
-/**ARTIKEL 1 GREAT DIXTER**/
-main ul:nth-of-type(2) li:nth-of-type(1) {
+  transition-property:var(--background-color-2); 
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s; 
+}
+
+.postcategories a:first-of-type {
+  display: inline-block;
+}
+
+.postcategories a:after {
+  content:"|";
+  margin-left: 7px;
+  margin-right: 7px;
+  font-size: 6px;
+  color:var(--color-grey-text);
+  opacity: .8;
+  vertical-align: 1px;
+}
+
+.postcategories a:last-child::after {
+  content: "";
+  margin-left: 0;
+}
+/***********ARTIKELEN************/
+
+/*LI*/
+.artikelen ul:nth-of-type(2) li {
   width: 95.5%;
   margin-right: 4.5%;
   margin-bottom: 40px;
@@ -392,7 +444,8 @@ main ul:nth-of-type(2) li:nth-of-type(1) {
   /* color:var(--color-grey-text); */
 /* } */
 
-main ul:nth-of-type(2) li:nth-of-type(1) a:nth-of-type(1) img {
+/*IMAGES*/
+.artikelen ul:nth-of-type(2) li  img {
   /* filter: brightness(100%); */
   
   /* transition-property: all;
@@ -400,635 +453,85 @@ main ul:nth-of-type(2) li:nth-of-type(1) a:nth-of-type(1) img {
   transition-timing-function: ease-in-out;
   transition-delay: 0s; */
 
-  /* outline-color: initial;
-  outline-style: none;
-  outline-width: initial; */
-
   max-width: 100%; /*afbeelding responsive*/
   display:block;
   width: 100%;
 }
 
-main ul:nth-of-type(2) li:nth-of-type(1) a:nth-of-type(2) {
-  line-height: 2;
-
-  color:var(--color-grey-text);
-  text-decoration: none;
-  font-size: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'VerlagCondensed-Book';
-  font-weight: 400;
-
-  /* transition-property:var(--background-color-2);
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s; */
-}
-
-main ul:nth-of-type(2) li:nth-of-type(1) h2 {
-  margin: 0 auto auto 12px;
+/*H2*/
+.artikelen ul:nth-of-type(2) li h2 {
+  margin: 0 0 12px 0;
   line-height: .9;
 
-  display: block; /* zorgt voor goede positie*/
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-
-  font-family: 'Chronicle-Text-G1-Bold';
+  letter-spacing: 1;
+  font-family: 'Chronicle-Text-G1-Roman';
+  /* font-family: 'Chronicle-Text-G1-Bold'; */
   color: var(--color-black-text);
   font-size: 14px;
   /* text-size-adjust: 100%; */
   letter-spacing: 1px;
 }
 
-main ul:nth-of-type(2) li:nth-of-type(1) p {
-  max-width: calc(100% - 10px);
+.artikelen ul:nth-of-type(2) li h2 a {
+  color: var(--color-black-text);
+}
+
+/*P*/
+.artikelen ul:nth-of-type(2) li  p {
+  max-width: calc(100% - 10px); /*lijn breedte tekst*/
 
   font-family: 'Chronicle-Text-G1-Roman';
   color: var(--color-black-text);
   font-size: 12px;
 }
 
-/**ARTIKEL 2 CAMALEONDA IN CALIFORNIA**/
-main ul:nth-of-type(2) li:nth-of-type(2) {
-  width: 95.5%;
-  margin-right: 4.5%;
-  margin-bottom: 40px;
-  flex-grow: 1;
-  max-width: 100%;
-}
+/**********UITZONDERINGEN ARTIKELEN***************/
 
-main ul:nth-of-type(2) li:nth-of-type(2) a:nth-of-type(1) img {
-  /* filter: brightness(100%); */
-  
-  /* transition-property: all;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s; */
+/**ARTIKEL 2 CAMALEONDA IN CALIFORNIA P**/
+.artikelen ul:nth-of-type(2) li:nth-of-type(2) p {
+  /* max-width: calc(100% - 10px); */
 
-  /* outline-color: initial;
-  outline-style: none;
-  outline-width: initial; */
-
-  max-width: 100%; /*afbeelding responsive*/
-  display:block;
-  width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(2) a:nth-of-type(2) {
-  line-height: 3;
-  display: inline-block;
-
+  font-family: 'Chronicle-Text-G1-Roman';
+  /* color: var(--color-black-text); */
+  /* font-size: 12px; */
+  margin-top: 10px;
+  margin-bottom: 0;
+  display: block;
   color:var(--color-grey-text);
-  text-decoration: none;
+  opacity: 1;
   font-size: 8px;
+  line-height: 1.9;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'VerlagCondensed-Book';
-  font-weight: 400;
 
-  /* transition-property:var(--background-color-2);
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s; */
+  transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
 }
 
-main ul:nth-of-type(2) li:nth-of-type(2) h2 {
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 12px;
-  line-height: .9;
+/**ARTIKEL 4 RE-WRITINGRODIN P**/
 
-  display: block; /* zorgt voor goede positie*/
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-
-  font-family: 'Chronicle-Text-G1-Bold';
-  color: var(--color-black-text);
-  font-size: 14px;
-  text-size-adjust: 100%;
-  letter-spacing: 1px;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(2) p {
-  max-width: calc(100% - 10px);
+.artikelen ul:nth-of-type(2) li:nth-of-type(4) p {
+  /* max-width: calc(100% - 10px); */
 
   font-family: 'Chronicle-Text-G1-Roman';
-  color: var(--color-black-text);
-  font-size: 12px;
-}
-
-/**ARTIKEL 3 BUILT IN**/
-main ul:nth-of-type(2) li:nth-of-type(3) {
-  width: 95.5%; /*breedte afbeelding*/
-  margin-right: 4.5%;
-  margin-bottom: 40px;
-  flex-grow: 2;
-  max-width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(3) a:nth-of-type(1) img {
-  /* filter: brightness(100%); */
-  
-  /* transition-property: all;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s; */
-
-  /* outline-color: initial;
-  outline-style: none;
-  outline-width: initial; */
-
-  max-width: 100%; /*afbeelding responsive*/
-  display:block;
-  width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(3) a:nth-of-type(2) {
-  line-height: 3;
-  display: inline-block;
-
+  /* color: var(--color-black-text); */
+  /* font-size: 12px; */
+  margin-top: 10px;
+  margin-bottom: 0;
+  display: block;
   color:var(--color-grey-text);
-  text-decoration: none;
+  opacity: 1;
   font-size: 8px;
+  line-height: 1.9;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'VerlagCondensed-Book';
-  font-weight: 400;
 
-  /* transition-property:var(--background-color-2);
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s; */
+  transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
 }
 
-main ul:nth-of-type(2) li:nth-of-type(3) h2 {
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 12px;
-  line-height: .9;
-
-  display: block; /* zorgt voor goede positie*/
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-
-  font-family: 'Chronicle-Text-G1-Bold';
-  color: var(--color-black-text);
-  font-size: 14px;
-  text-size-adjust: 100%;
-  letter-spacing: 1px;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(3) p {
-  max-width: calc(100% - 10px);
-
-  font-family: 'Chronicle-Text-G1-Roman';
-  color: var(--color-black-text);
-  font-size: 12px;
-}
-/**ARTIKEL 4 RE-WRITINGRODIN**/
-main ul:nth-of-type(2) li:nth-of-type(4) {
-  width: 95.5%;
-  margin-right: 4.5%;
-  margin-bottom: 40px;
-  flex-grow: 2;
-  max-width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(4) a:nth-of-type(1) img {
-  /* filter: brightness(100%); */
-  
-  /* transition-property: all;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s; */
-
-  /* outline-color: initial;
-  outline-style: none;
-  outline-width: initial; */
-
-  max-width: 100%; /*afbeelding responsive*/
-  display:block;
-  width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(4) a:nth-of-type(2) {
-  line-height: 3;
-  display: inline-block;
-
-  color:var(--color-grey-text);
-  text-decoration: none;
-  font-size: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'VerlagCondensed-Book';
-  font-weight: 400;
-
-  /* transition-property:var(--background-color-2);
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s; */
-}
-
-main ul:nth-of-type(2) li:nth-of-type(4) h2 {
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 12px;
-  line-height: .9;
-
-  display: block; /* zorgt voor goede positie*/
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-
-  font-family: 'Chronicle-Text-G1-Bold';
-  color: var(--color-black-text);
-  font-size: 14px;
-  text-size-adjust: 100%;
-  letter-spacing: 1px;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(4) p {
-  max-width: calc(100% - 10px);
-
-  font-family: 'Chronicle-Text-G1-Roman';
-  color: var(--color-black-text);
-  font-size: 12px;
-}
-/**ARTIKEL 5 THE MODULIGHTOR BUILDING**/
-main ul:nth-of-type(2) li:nth-of-type(5) {
-  width: 95.5%;
-  margin-right: 4.5%;
-  margin-bottom: 40px;
-  flex-grow: 2;
-  max-width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(5) a:nth-of-type(1) img {
-  /* filter: brightness(100%); */
-  
-  /* transition-property: all;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s; */
-
-  /* outline-color: initial;
-  outline-style: none;
-  outline-width: initial; */
-
-  max-width: 100%; /*afbeelding responsive*/
-  display:block;
-  width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(5) a:nth-of-type(2) {
-  line-height: 3;
-  display: inline-block;
-
-  color:var(--color-grey-text);
-  text-decoration: none;
-  font-size: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'VerlagCondensed-Book';
-  font-weight: 400;
-
-  /* transition-property:var(--background-color-2);
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s; */
-}
-
-main ul:nth-of-type(2) li:nth-of-type(5) h2 {
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 12px;
-  line-height: .9;
-
-  display: block; /* zorgt voor goede positie*/
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-
-  font-family: 'Chronicle-Text-G1-Bold';
-  color: var(--color-black-text);
-  font-size: 14px;
-  text-size-adjust: 100%;
-  letter-spacing: 1px;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(5) p {
-  max-width: calc(100% - 10px);
-
-  font-family: 'Chronicle-Text-G1-Roman';
-  color: var(--color-black-text);
-  font-size: 12px;
-}
-/**ARTIKEL 6 TIME AND SPACE TO WAIT**/
-main ul:nth-of-type(2) li:nth-of-type(6) {
-  width: 95.5%;
-  margin-right: 4.5%;
-  margin-bottom: 40px;
-  flex-grow: 2;
-  max-width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(6) a:nth-of-type(1) img {
-  /* filter: brightness(100%); */
-  
-  /* transition-property: all;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s; */
-
-  /* outline-color: initial;
-  outline-style: none;
-  outline-width: initial; */
-
-  max-width: 100%; /*afbeelding responsive*/
-  display:block;
-  width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(6) a:nth-of-type(2) {
-  line-height: 3;
-  display: inline-block;
-
-  color:var(--color-grey-text);
-  text-decoration: none;
-  font-size: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'VerlagCondensed-Book';
-  font-weight: 400;
-
-  /* transition-property:var(--background-color-2);
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s; */
-}
-
-main ul:nth-of-type(2) li:nth-of-type(6) h2 {
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 12px;
-  line-height: .9;
-
-  display: block; /* zorgt voor goede positie*/
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-
-  font-family: 'Chronicle-Text-G1-Bold';
-  color: var(--color-black-text);
-  font-size: 14px;
-  text-size-adjust: 100%;
-  letter-spacing: 1px;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(6) p {
-  max-width: calc(100% - 10px);
-
-  font-family: 'Chronicle-Text-G1-Roman';
-  color: var(--color-black-text);
-  font-size: 12px;
-}
-/**ARTIKEL 7 SUMMER PLAYLIST 2021**/
-main ul:nth-of-type(2) li:nth-of-type(7) {
-  width: 95.5%;
-  margin-right: 4.5%;
-  margin-bottom: 40px;
-  flex-grow: 2;
-  max-width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(7) a:nth-of-type(1) img {
-  /* filter: brightness(100%); */
-  
-  /* transition-property: all;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s; */
-
-  /* outline-color: initial;
-  outline-style: none;
-  outline-width: initial; */
-
-  max-width: 100%; /*afbeelding responsive*/
-  display:block;
-  width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(7) a:nth-of-type(2) {
-  line-height: 3;
-  display: inline-block;
-
-  color:var(--color-grey-text);
-  text-decoration: none;
-  font-size: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'VerlagCondensed-Book';
-  font-weight: 400;
-
-  /* transition-property:var(--background-color-2);
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s; */
-}
-
-main ul:nth-of-type(2) li:nth-of-type(7) h2 {
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 12px;
-  line-height: .9;
-
-  display: block; /* zorgt voor goede positie*/
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-
-  font-family: 'Chronicle-Text-G1-Bold';
-  color: var(--color-black-text);
-  font-size: 14px;
-  text-size-adjust: 100%;
-  letter-spacing: 1px;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(7) p {
-  max-width: calc(100% - 10px);
-
-  font-family: 'Chronicle-Text-G1-Roman';
-  color: var(--color-black-text);
-  font-size: 12px;
-}
-/**ARTIKEL 8 INTENTIONAL SPARSENESS**/
-main ul:nth-of-type(2) li:nth-of-type(8) {
-  width: 95.5%;
-  margin-right: 4.5%;
-  margin-bottom: 40px;
-  flex-grow: 2;
-  max-width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(8) a:nth-of-type(1) img {
-  /* filter: brightness(100%); */
-  
-  /* transition-property: all;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s; */
-
-  /* outline-color: initial;
-  outline-style: none;
-  outline-width: initial; */
-
-  max-width: 100%; /*afbeelding responsive*/
-  display:block;
-  width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(8) a:nth-of-type(2) {
-  line-height: 3;
-  display: inline-block;
-
-  color:var(--color-grey-text);
-  text-decoration: none;
-  font-size: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'VerlagCondensed-Book';
-  font-weight: 400;
-
-  /* transition-property:var(--background-color-2);
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s; */
-}
-
-main ul:nth-of-type(2) li:nth-of-type(8) h2 {
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 12px;
-  line-height: .9;
-
-  display: block; /* zorgt voor goede positie*/
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-
-  font-family: 'Chronicle-Text-G1-Bold';
-  color: var(--color-black-text);
-  font-size: 14px;
-  text-size-adjust: 100%;
-  letter-spacing: 1px;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(8) p {
-  max-width: calc(100% - 10px);
-
-  font-family: 'Chronicle-Text-G1-Roman';
-  color: var(--color-black-text);
-  font-size: 12px;
-}
-/**ARTIKEL 9 THE GOTHEANUM**/
-main ul:nth-of-type(2) li:nth-of-type(9) {
-  width: 95.5%;
-  margin-right: 4.5%;
-  margin-bottom: 40px;
-  flex-grow: 2;
-  max-width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(9) a:nth-of-type(1) img {
-  /* filter: brightness(100%); */
-  
-  /* transition-property: all;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s; */
-
-  /* outline-color: initial;
-  outline-style: none;
-  outline-width: initial; */
-
-  max-width: 100%; /*afbeelding responsive*/
-  display:block;
-  width: 100%;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(9) a:nth-of-type(2) {
-  line-height: 3;
-  display: inline-block;
-
-  color:var(--color-grey-text);
-  text-decoration: none;
-  font-size: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'VerlagCondensed-Book';
-  font-weight: 400;
-
-  /* transition-property:var(--background-color-2);
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s; */
-}
-
-main ul:nth-of-type(2) li:nth-of-type(9) h2 {
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 12px;
-  line-height: .9;
-
-  display: block; /* zorgt voor goede positie*/
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-
-  font-family: 'Chronicle-Text-G1-Bold';
-  color: var(--color-black-text);
-  font-size: 14px;
-  text-size-adjust: 100%;
-  letter-spacing: 1px;
-}
-
-main ul:nth-of-type(2) li:nth-of-type(9) p {
-  max-width: calc(100% - 10px);
-
-  font-family: 'Chronicle-Text-G1-Roman';
-  color: var(--color-black-text);
-  font-size: 12px;
-}
 
 /*******************TWEEDE SECTION********************/
 .featuredproducts {
@@ -1052,6 +555,7 @@ main ul:nth-of-type(2) li:nth-of-type(9) p {
   margin-bottom: 30px;
   flex-wrap: wrap;
   text-align: left;
+  padding-left:0;
 }
 
 .featuredproducts ul:nth-of-type(1) h3 {
@@ -1097,10 +601,15 @@ main ul:nth-of-type(2) li:nth-of-type(9) p {
  transition: 300ms all ease-in-out;
 
 }
+.subscriptionimg {
+  width: 100%;
 
+  padding-right: 0;
+  order:2;
+}
 .featuredproducts ul:nth-of-type(1) img {
   display: block;
-  width: 100%;
+
 
   opacity: 1;
 
@@ -1109,8 +618,7 @@ main ul:nth-of-type(2) li:nth-of-type(9) p {
     transition-timing-function: ease-in-out;
     transition-delay: 0s;
 
-  padding-right: 0;
-  order:2;  
+  
 }
 
 .subscriptiontext {
@@ -1174,6 +682,7 @@ transition-property: all;
   margin-bottom: 0;
   border-bottom: 0px;
   text-transform: none;
+  margin-top: 15px;
 
   padding-bottom: 3px;
   display: inline-block;
@@ -1183,12 +692,23 @@ transition-property: all;
 }
 
 .featuredproducts ul:nth-of-type(2) p {
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 8px;
   color:gray;
   margin: 5px 0 5px 0;
   font-family: 'VerlagCondensed-Book';
+}
+
+.featuredproducts ul:nth-of-type(2) span {
+  margin:0;
+  font-family: 'Verlag-Book';
+  font-weight: 400;
+  color:gray;
+  display: block;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
 }
 /*********************************************************FOOTER******************************************************/
 footer {
@@ -1196,27 +716,45 @@ footer {
   color: gray;
 }
 
-div.site-info {
-  flex-wrap: wrap;
+footer::before {
+  content:"";
+  display:table;
+  table-layout: fixed;
+}
+
+.site-info {
   max-width: 1833px;
   margin: 0 auto 0 auto;
   padding: 100px 37px 100px 37px;
   display: flex; 
 }
 
-div.about-text {
-  width: 100%;
-  font-size: 14px;
-  margin-bottom: 40px;
+@media(max-width: 800px) {
+  .site-info {
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width: 800px) {
+  .about-text{
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}
+
+.about-text {
   padding-right: 10%;
 }
 
-div.about-text p {
+.about-text p {
   margin-top: 0;
   margin-bottom: 30px;
+  font-family: 'Chronicle-Text-G1-Roman';
+  line-height: 20px;
 }
 
-div.about-text a {
+.about-text a {
   width: 60px;
   max-height: 12px;
   vertical-align: -1px;
@@ -1228,22 +766,55 @@ div.about-text a {
   text-transform: uppercase;
 }
 
-div.footer-menus {
+/* .footer-menus {
   display: flex;
   justify-content: flex-start;
   width: 50%;
   margin-bottom: 40px;
+} */
+
+div.footer-menus::before {
+  content:"";
+  display:table;
+  table-layout: fixed;
 }
 
-div.footer-menus ul {
+@media(max-width: 400px) {
+  div.footer-menus {
+    display: block;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+
+@media(max-width: 800px) {
+  div.footer-menus {
+    display: block;
+    width: 50%;
+    margin-bottom: 40px;
+  }
+}
+
+#colophon .footer-menus div{
   width: 33%;
-  font-size: 14px;
-  font-family: 'Chronicle-Text-G1-Roman';
-  margin: 0;
-  padding: 0;
 }
 
-div.footer-menus ul p{
+.footer-menus div {
+  /* width: 33%; */
+  /* font-size: 14px; */
+  font-family: 'Chronicle-Text-G1-Roman';
+  /* margin: 0; */
+  /* padding: 0; */
+  float: left;
+}
+
+.footer-menus ul {
+  margin: 0;
+  padding-right: 5px;
+  padding-left: 0;
+}
+
+.footer-menus div span{
   display: block;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -1253,11 +824,11 @@ div.footer-menus ul p{
   font-size: 11px;
 }
 
-div.footer-menus ul li {
+.footer-menus ul li {
   list-style-type: none;
 }
 
-div.footer-menus ul li a {
+.footer-menus ul li a {
   color:#f5f5f5;
   font-size: 12px;
   text-decoration: none;
@@ -1267,15 +838,37 @@ div.footer-menus ul li a {
   line-height: 1.9;
 }
 
-div.footer-social {
+div.footer-menus::after {
+  content:"";
+  display:table;
+  table-layout: fixed;
+}
+
+@media(max-width: 400px) {
+  .site-info .footer-social {
+    width: 100%;
+  }
+}
+
+@media(max-width: 800px) {
+  .site-info .footer-social {
+    width: 50%;
+  }
+}
+@media(max-width: 400px) {
+  .footer-social {
+    text-align: left;
+  }
+}
+/* .footer-social {
   right: 0;
   width: 50%;
   font-size: 14px;
   text-align: right;
   max-width: 800px;
-}
+} */
 
-div.footer-social p {
+.footer-social span {
   display: block;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1285,13 +878,19 @@ div.footer-social p {
   font-weight: 400;
 }
 
-div.footer-social form {
+#mc-embedded-subscribe-form {
   white-space: nowrap;
+}
+.footer-social form {
   display: block;
   margin-top: 0em;
 }
 
-div.footer-social .email  {
+#colophon #mce-EMAIL-footer {
+  margin-bottom: 25px;
+}
+
+#mc-embedded-subscribe-form input {
   margin-bottom: 25px;
   margin-top: 21px;
   background-color: transparent;
@@ -1303,7 +902,19 @@ div.footer-social .email  {
   border-color: gray;
 }
 
-div.footer-social .submit {
+/* .footer-social .email  {
+  margin-bottom: 25px;
+  margin-top: 21px;
+  background-color: transparent;
+  border-radius: 1px;
+  font-size: 12px;
+  color:#f5f5f5;
+  width: 150px;
+  padding: 5px 10px 5px 10px;
+  border-color: gray;
+}
+
+.footer-social .submit {
   display: inline;
   width: 36px;
   height: 30px;
@@ -1333,7 +944,7 @@ div.footer-social .submit {
   border-color: gray;
 
   line-height: 1;
-}
+} */
 
 /* div.footer-social a:nth-of-type(1){
   margin-right: 15px;
