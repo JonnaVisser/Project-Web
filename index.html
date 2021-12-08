@@ -13,6 +13,97 @@
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 
+<section aria-label="full-menu" class="full-menu">
+	<header>
+		<section>
+			<div>
+				<h1>
+					<a href="#" rel="home">CEREAL</a>
+				</h1>
+			</div>
+			<div>
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+		</section>
+	</header>
+	
+	<main>
+		<section>
+			<ul>
+				<li>
+					<a href="#">TRAVEL</a>
+				</li>
+				<li>
+					<a href="#">ART</a>
+				</li>
+				<li>
+					<a href="#">DESIGN</a>
+				</li>
+				<li>
+					<a href="#">STYLE</a>
+				</li>
+				<li>
+					<a href="#">CITY GUIDES</a>
+				</li>
+				<li>
+					<a href="#">SHOP</a>
+				</li>
+			</ul>
+			<div>
+				<p>info</p>
+				<ul>
+					<li>
+						<a href="#">Stocklist</a>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+					<li>
+						<a href="#">Career</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<p>MEDIA</p>
+				<ul>
+					<li>
+						<a href="#">Playlist</a>
+					</li>
+					<li>
+						<a href="#">Films</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<p>WEBSITE</p>
+				<ul>
+					<li>
+						<a href="#">Terms</a>
+					</li>
+					<li>
+						<a href="#">Shipping</a>
+					</li>
+					<li>
+						<a href="#">FAQs</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<p>NEWSLETTER</p>
+				<form action="">
+					<input type="text">
+				</form>
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+			</div>
+		</section>
+	</main>
+</section>
+
 <body>
 	<header>
 		<section aria-label="header">
@@ -224,19 +315,18 @@
 	</main>
 
 	<footer>
-		<section aria-label="site-info" class="site-info">
-				<div class="about-text">
+		<section aria-label="site-info" class="footer">
+				<article class="footer-about-text">
 					<p>Cereal is a biannual, travel & style magazine based in the United Kingdom, Each issue focusses on
 						a
 						select number of destinations, alongside engaging interviews and stories on unique
 						design, art, and fashion.
 					</p>
 					<a href="index.html">cereal</a>
-				</div>
-				<div class="footer-menus">
-					<div>
+				</article>
+					<section aria-label="footer-menu-row1" class="footer-menu-row1">
+						<span>info</span>
 					<ul>
-						<span>INFO</span>
 						<li>
 							<a href="#">Stocklist</a>
 						</li>
@@ -247,10 +337,10 @@
 							<a href="#">Career</a>
 						</li>
 					</ul>
-				</div>
-				<div>
+				</section>
+				<section aria-label="footer-menu-row2" class="footer-menu-row2">
+					<span>media</span>
 					<ul>
-						<span>MEDIA</span>
 						<li>
 							<a href="#">Playlist</a>
 						</li>
@@ -258,10 +348,10 @@
 							<a href="#">Films</a>
 						</li>
 					</ul>
-				</div>
-				<div>
+				</section>
+				<section aria-label="footer-menu-row3" class="footer-menu-row3">
+					<span>website</span>
 					<ul>
-						<span>WEBSITE</span>
 						<li>
 							<a href="#">Terms</a>
 						</li>
@@ -272,14 +362,15 @@
 							<a href="#">FAQs</a>
 						</li>
 					</ul>
-				</div>
-				</div>
-				<div class="footer-social">
+				</section>
+				<section aria-label="footer-form" class="footer-form">
 					<span>newsletter</span>
 					<form action="#">
 						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL-footer" placeholder="enter email" required="">
-						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe-footer" class="button">
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe-footer" class="button" src="images/arrow-right.svg">
 					</form>
+				</section>
+				<section aria-label="footer-social" class="footer-social">
 					<a href="https://instagram.com/cerealmag" target="_blank" rel="noopener">CEREAL instagram
 					<svg xmlns="http://www.w3.org/2000/svg" width="14" height="16">
 						<path d="M9.143 8c0-1.259-1.027-2.286-2.286-2.286S4.571 6.741 4.571 8s1.027 2.286 2.286 2.286S9.143 9.259 9.143 8zm1.232 0c0 1.946-1.571 3.518-3.518 3.518S3.339 9.947 3.339 8 4.91 4.482 6.857 4.482 10.375 6.053 10.375 8zm.964-3.661c0 .455-.366.821-.821.821s-.821-.366-.821-.821.366-.821.821-.821.821.366.821.821zM6.857 2.375c-1 0-3.143-.08-4.045.277-.313.125-.545.277-.786.518s-.393.473-.518.786c-.357.902-.277 3.045-.277 4.045s-.08 3.143.277 4.045c.125.313.277.545.518.786s.473.393.786.518c.902.357 3.045.277 4.045.277s3.143.08 4.045-.277c.313-.125.545-.277.786-.518s.393-.473.518-.786c.357-.902.277-3.045.277-4.045s.08-3.143-.277-4.045c-.125-.313-.277-.545-.518-.786s-.473-.393-.786-.518c-.902-.357-3.045-.277-4.045-.277zM13.714 8c0 .946.009 1.884-.045 2.83-.054 1.098-.304 2.071-1.107 2.875s-1.777 1.054-2.875 1.107c-.946.054-1.884.045-2.83.045s-1.884.009-2.83-.045c-1.098-.054-2.071-.304-2.875-1.107S.098 11.928.045 10.83C-.009 9.884 0 8.946 0 8s-.009-1.884.045-2.83c.054-1.098.304-2.071 1.107-2.875s1.777-1.054 2.875-1.107c.946-.054 1.884-.045 2.83-.045s1.884-.009 2.83.045c1.098.054 2.071.304 2.875 1.107s1.054 1.777 1.107 2.875c.054.946.045 1.884.045 2.83z"></path>
@@ -300,7 +391,7 @@
 						<path d="M0 5.33C0 2.035 3.018 0 6.071 0c2.804 0 5.357 1.929 5.357 4.884 0 2.777-1.42 5.857-4.58 5.857-.75 0-1.696-.375-2.063-1.071-.679 2.688-.625 3.089-2.125 5.143l-.125.045-.08-.089c-.054-.563-.134-1.116-.134-1.679 0-1.821.839-4.455 1.25-6.223-.223-.455-.286-1.009-.286-1.509 0-.902.625-2.045 1.643-2.045.75 0 1.152.571 1.152 1.277 0 1.161-.786 2.25-.786 3.375 0 .768.634 1.304 1.375 1.304 2.054 0 2.688-2.964 2.688-4.545 0-2.116-1.5-3.268-3.527-3.268-2.357 0-4.179 1.696-4.179 4.089 0 1.152.705 1.741.705 2.018 0 .232-.17 1.054-.464 1.054-.045 0-.107-.018-.152-.027C.463 8.206-.001 6.501-.001 5.331z"></path>
 					  </svg>
 					</a>
-				</div>
+				</section>
 		</section>
 	</footer>
 	<script src="scripts/script.js"></script>
