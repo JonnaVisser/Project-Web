@@ -13,6 +13,7 @@
   --background-color-2:#404040;
   --color-black-text:#2b2b2b;
   --footer-color:#4d4d4d;
+  --full-menu-color:#858687;
 }
 
 /*****FONTS*****/
@@ -40,6 +41,12 @@
   src: url("/fonts/Verlag-Book.otf") format("otf"),
    url("/fonts/Verlag-Book.woff") format("woff"),
    url("/fonts/Verlag-Book.woff2") format("woff2");
+}
+
+ .text-visually-hidden { 
+  font-size: 0;
+  line-height: 0;
+  color: transparent; 
 }
 
 input {
@@ -111,24 +118,6 @@ img {
   max-width: 100%;
   border:0;
   opacity: 1;
-
-  /* border-top-color: initial;
-  border-top-style: initial;
-  border-top-width: 0px;
-  border-right-color: initial;
-  border-right-style: initial;
-  border-right-width: 0px;
-  border-bottom-color: initial;
-  border-bottom-style: initial;
-  border-bottom-width: 0px;
-  border-left-color: initial;
-  border-left-style: initial;
-  border-left-width: 0px;
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial; */
 }
 
 p {
@@ -151,6 +140,8 @@ div {
 /********************************************************HEADER************************************************/
 
 header {
+  display: flex;
+  justify-content: space-between;
   position:fixed;
   top:0;
   left:0;
@@ -159,120 +150,164 @@ header {
 
   background-color: var(--background-color);
   padding: 10px 27px 10px 27px;
-  display: block;
 
-  transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: linear;
-    transition-delay: 0s;
 }
 
-header section {
-  position: relative;
 
-  /**MARGIN**/
-  max-width: 1800px;
-  margin: 0px auto 0px auto;
-}
-
-header div {
-  opacity: 1;
-
-  /**FLEXBOX**/
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  /* display: block; */
-
-  /**PADDING**/
-  padding-top: 0px;
-  padding-right: 2px;
-  padding-bottom: 0px;
-  padding-left: 2px;
-
-  margin:0;
-}
-
-header h1, ul {
+header h1, 
+header > ul {
 margin:0;
 }
 
   
 
 
-h1 a{
+header h1 a{
   /**LOGO**/
   background-image: url(https://readcereal.com/wp-content/themes/cereal/img/logo.svg);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 100% auto;
+
   text-indent: -999999px;
-  background-size: 120px auto;
+  
   height: 50px;
   width: 120px;
   display: inline-block;
   position: relative;
 }
 
-header ul {
-  width: auto;
+header > ul {
 
   /**FLEXBOX**/
   display: flex;
-  justify-content: flex-end;
   gap: 0.5em;
-  white-space: nowrap;
-}
 
-header li:nth-of-type(1) a { 
-  
-  /**ICON MY ACCOUNT**/
-  background-image: url(https://readcereal.com/wp-content/themes/cereal/img/account.svg);
+}
+header > ul li a, header > ul li button,
+.full-menu > button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 14px 14px;
-  height: 50px;
-  width: 40px;
-  display: block; /*zorg ervoor dat tekst weggaat en alleen icon zichtbaar is*/
-  text-align: left;
-  text-indent:-999999px; /*zorg ervoor dat tekst weggaat en alleen icon zichtbaar is*/
-  margin-left: 5px;
-}
 
-header li:nth-of-type(2) a { 
-  
-  /**ICON SEARCH**/
-  /* transition:background-image .3s linear; */
-    /* background-size: 11px; */
-  background-image: url(https://readcereal.com/wp-content/themes/cereal/img/searchIcon.svg);
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size: 14px 14px;
-  height: 50px;
-  width: 40px;
-  display: block; /*zorg ervoor dat tekst weggaat en alleen icon zichtbaar is*/
-  text-align: left;
-  text-indent:-999999px; /*zorg ervoor dat tekst weggaat en alleen icon zichtbaar is*/
-}
-
-header li:nth-of-type(3) a {  
-  
-  /**ICON MENU**/
-  background-image: url(https://readcereal.com/wp-content/themes/cereal/img/mMenu.svg);
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size: 17px 17px;
   height: 50px;
   display: block; /*zorg ervoor dat tekst weggaat en alleen icon zichtbaar is*/
   padding: 16px;
   outline: none;
   text-align: left;
-  text-indent:-999999px; /*zorg ervoor dat tekst weggaat en alleen icon zichtbaar is*/
+  text-indent:-999999px;
+}
+
+header > ul li:nth-of-type(1) a { 
+  
+  /**ICON MY ACCOUNT**/
+  background-image: url(https://readcereal.com/wp-content/themes/cereal/img/account.svg);
+}
+
+header > ul li:nth-of-type(2) a { 
+  
+  /**ICON SEARCH**/
+  /* transition:background-image .3s linear; */
+    /* background-size: 11px; */
+  background-image: url(https://readcereal.com/wp-content/themes/cereal/img/searchIcon.svg);
+}
+
+header > ul li:nth-of-type(3) button {  
+  border: none;
+  /**ICON MENU**/
+  background-image: url(https://readcereal.com/wp-content/themes/cereal/img/mMenu.svg);
+
+   /*zorg ervoor dat tekst weggaat en alleen icon zichtbaar is*/
 }
 
 
+header section {
+position:fixed;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+background-color: red;
 
+transform: translateX(100%);
+}
+
+.geopendMenu {
+  transform: translateX(0%);
+}
+
+.geslotenMenu {
+  transform: translateX(100%);
+}
+
+.full-menu > button {
+  border-radius: none;
+  background-color: transparent;
+  background-image: url(https://readcereal.com/wp-content/themes/cereal/img/closeWhite.svg);
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.full-menu {
+  width: 100vw;
+  top: 0;
+  left:0;
+  background-color: var(--full-menu-color);
+  position:fixed;
+  z-index: 999999;
+  overflow: scroll;
+}
+
+.full-menu > ul {
+  width: 100%;
+  margin-right: 0%;
+  margin-bottom: 30px;
+  padding: 0 38px 0 38px;
+  max-width: 1832px;
+
+  /* display: flex;
+  flex-wrap: wrap; */
+  
+}
+
+.full-menu > ul li {
+  color:gray;
+  list-style:none;
+
+}
+
+.full-menu > ul li a {
+  text-decoration: none;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.9;
+  padding-bottom: 5px;
+  border-bottom: 1px solid transparent;
+  font-family: 'Chronicle-Text-G1-Roman';
+
+}
+
+.full-menu > ul li a a:focus {
+  color: var(--color-black-text);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.full-menu > ul li a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  color: var(--color-grey-text);
+}
+
+.full-menu > ul li a:active {
+  color:var(--background-color);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
 /*****************************************************MAIN***********************************************/
 
 main {
@@ -837,6 +872,6 @@ input#mc-embedded-subscribe-footer {
 }
 
 .footer-social a{
-margin-right: 15px;
+margin-right: 20px;
 color:var(--footer-color);
 }
