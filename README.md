@@ -182,10 +182,16 @@ Bij concentratieproblemen vallen vooral foto's snel op en valt tekst weg. Dit wo
 
 Door een website te hebben met veel plaatjes valt het meer op. Het kan zijn dat je plaatjes iets laat vertellen zodat iemand met concentratieproblemen het snapt. Tekst vergroten kan ook beter zijn voor mensen met concentratieproblemen.
 
+<img src="/images/probleem-concentratie.jpg" width="375px" alt="probleem concentratie">
+<img src="/images/oplossing%20concentratie.jpg.jpg" width="375px" alt="oplossing concentratie">
+
 ##### Engels aangeven
 In de HTML wordt de Engelse tekst vertaald naar het Nederlands en dit worden rare zinnen. 
 
 In mijn website staan alleen maar engelse teksten en hierbij moet ik aangeven dat ik deze in het engels wil houden in mijn html en niet vertaald wil hebben. 
+
+<img src="/images/probleem-engels-aangeven.jpg" width="375px" alt="probleem engels aangeven">
+<img src="/images/oplossing%20engels%20aangeven.jpg" width="375px" alt="oplossing engels aangeven">
 
 ##### standaard 
 Het tabben in de website werkt maar is nog standaard. 
@@ -234,15 +240,16 @@ Ik wil nu verder met meer overzicht creeëren en comments plaatsen. Met een bete
 Hoe begin ik met het responsive maken?
 Hoe kan ik sommige test resultaten verwerken?
 Hoe krijg ik de button in het uitgeklapte menu naar rechts?
+Hoe kan ik het menu blijven openmaken?
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Na wat stoeien de button van het hamburgmenu op de goede plek gekregen.
+- Ga bekijken hoe je het een kruisje maakt.
+- Zet de puntjes op de i bij de styling van de homepagina voor mobile device
+
 
 </details>
 

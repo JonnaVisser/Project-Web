@@ -1,6 +1,6 @@
 // JavaScript Document
 var openMenuButton = document.querySelector("header ul li button")
-var closeMenuBtton = document.querySelector(".full-menu button")
+// var closeMenuBtton = document.querySelector(".full-menu button")
 var hetMenu = document.querySelector(".full-menu")
 
 
@@ -11,7 +11,7 @@ function openHetMenu() {
     // animeer het kruisje --> kan later
 
     // voeg de class 'geopendMenu' toe aan hetMenu
-    hetMenu.classList.add("geopendMenu")
+    hetMenu.classList.toggle("geopendMenu")
     console.log(hetMenu.classList)   
 }
 
@@ -23,8 +23,8 @@ function openHetMenu() {
 
 // wanneer je op de button klikt, klapt het menu in
 
-closeMenuBtton.addEventListener('click', sluitHetMenu)
-function sluitHetMenu() {
-    hetMenu.classList.remove("geslotenMenu")
-    console.log(hetMenu.classlist)
-}
+// closeMenuBtton.addEventListener('click', sluitHetMenu)
+// function sluitHetMenu() {
+//     hetMenu.classList.remove("geopendMenu")
+//     console.log(hetMenu.classlist)
+// }
