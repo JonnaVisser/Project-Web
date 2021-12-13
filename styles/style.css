@@ -15,7 +15,40 @@
 }
 
 /****************************************************FONTS****************************************************/
+@media (min-width:38em) { .landscape, .portrait { padding:3vw; } }
+@media (min-width:57em) { .landscape, .portrait { padding:2.5vw; } }
 
+main > section:first-of-type ul{
+    /* jouw code hier */
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
+    gap:1em;
+    grid-auto-flow: dense;
+  }
+
+  .landscape:first-child {
+    /* jouw code hier */
+    grid-column-start:1;
+    grid-column-end:-1;
+  }
+
+  .landscape {
+    /* jouw code hier */
+    
+    /* nb. niet nodig voor de eerste 3 sommetjes */
+    grid-column:span 2;
+    /* background-color:lightpink; */
+  
+  }
+  
+  .portrait {
+    /* jouw code hier */
+    grid-row:span 2;
+    /* background-color:lightblue; */
+    /* nb. niet nodig voor de eerste 3 sommetjes */
+  
+  }
 /******************************************************ALGEMEEN************************************************/
 /***zorgt ervoor dat verborgen tekst bij een icoon verdwijnt***/
  .text-visually-hidden { 
@@ -303,6 +336,8 @@ padding:0;
 display: block;
 }
 
+
+
 /*******************EERSTE SECTION********************/
 
 /***WITRUIMTE EERSTE SECTION HOMEPAGE***/
@@ -330,9 +365,9 @@ main > section:first-of-type ul:nth-of-type(1) {
   padding: 0;
 
 
-    display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
 /*HOME MENU LI*/
@@ -426,14 +461,10 @@ main > section:first-of-type {
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 500px) {
   main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1),
   ul:nth-of-type(2) li:nth-of-type(3), li:nth-of-type(7) {
-    width: 95.5%;
-    margin-right: 4.5%;
-    margin-bottom: 40px;
-    flex-grow: 2;
-    max-width: 100%;
+    display:grid;
   }
 }
 
@@ -462,19 +493,27 @@ main > section:first-of-type {
   }
     } */
 
+  @media screen and (max-width:500px) {
+    main > section:first-of-type ul:nth-of-type(2) {
+      /*witruimte*/
+        padding: 0;
+        margin: 0 -3.2% 0 0;
+      
+      
+        /* opacity: 1; */
+        /*FLEXBOX*/
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+  }
 
-main > section:first-of-type ul:nth-of-type(2) {
-/*witruimte*/
-  padding: 0;
-  margin: 0 -3.2% 0 0;
+  main > section:first-of-type ul:nth-of-type(2) {
+    /*witruimte*/
+      padding: 0;
+      margin: 0 -3.2% 0 0;
+  }
 
-
-  /* opacity: 1; */
-  /*FLEXBOX*/
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 
 /***LINKS ONDER AFBEELDINGEN*/
 main > section:first-of-type article {
@@ -526,10 +565,20 @@ main > section:first-of-type ul:nth-of-type(2) li {
   margin-bottom: 40px;
 
 
-  /* flex-grow: 1;
+  flex-grow: 1;
   max-width: 100%;  
-  width: 95.5%; */
+  width: 95.5%;
 }
+
+/* .portrait {
+  flex-basis:10em;
+  flex-grow:1;
+}
+
+.landscape {
+  flex: basis 10em;
+  flex-grow:1;
+} */
 
 /***ARTIKELEN IMAGES***/
 main > section:first-of-type ul:nth-of-type(2) li  img {
@@ -548,7 +597,7 @@ main > section:first-of-type ul:nth-of-type(2) li h2 {
   /*font*/
   font-family: 'Bentham', serif;
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: 20px;
 
   /* color: var(--color-black-text); */
   /* text-size-adjust: 100%; */
@@ -987,4 +1036,105 @@ input#mc-embedded-subscribe-footer {
 /***SOCIAL ICONEN***/
 .footer-social a{
 margin-right: 20px;
+}
+
+
+
+
+
+/*********************************************************TWEEDE PAGINA MAIN******************************************************/
+/***WITRUIMTE GEHELE MAIN***/
+.travelpagina {
+  padding:0 20px 0 20px;
+}
+/***TRAVELPAGINA MAIN UL***/
+.travelpagina > ul {
+  padding: 0;
+  margin: 0 -3.2% 0 0; 
+
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/***TRAVELPAGINA MAIN LI***/
+.travelpagina > ul li {
+/*witruimte*/
+margin-right: 4.5%;
+margin-bottom: 40px;
+}
+
+/***TRAVELPAGINA MAIN IMAGES***/
+.travelpagina > ul li img {
+  max-width: 100%;
+
+
+  display:block;
+}
+
+/***LINKS ONDER AFBEELDINGEN*/
+.travelpagina > ul li article {
+  line-height: 2;
+}
+
+/***LINKS ONDER AFBEELDINGEN*/
+.travelpagina > ul li article a{
+  /*kleur*/
+  color:var(--color-black-text);
+
+  /*font*/
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+  /***STREEPJE TUSSEN DE LINKS***/
+  .travelpagina > ul li article a::after {
+  content:"|";
+  margin-left: 7px;
+  margin-right: 7px;
+  font-size: 16px;
+  color:var(--color-grey-text);
+  opacity: .8;
+  vertical-align: 1px;
+}
+
+/***VERWIJDEREN STREEPJE BIJ LAATSTE A***/
+.travelpagina > ul li article a:last-child::after {
+  content: "";
+  margin-left: 0;
+}
+
+/***TRAVELPAGINA MAIN H2***/
+.travelpagina > ul li h2 {
+  /*witruimte*/
+  margin: 0 0 12px 0;
+  line-height: .9;
+
+  /*font*/
+  font-family: 'Bentham', serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+
+  /* color: var(--color-black-text); */
+  /* text-size-adjust: 100%; */
+}
+
+/***TRAVELPAGINA MAIN H2-A***/
+.travelpagina > ul li h2 a {
+  color: var(--color-black-text);
+}
+
+/***TRAVELPAGINA MAIN P***/
+.travelpagina > ul li p {
+  /*lijn breedte tekst*/
+  max-width: calc(100% - 10px); 
+
+  /*font*/
+  font-family: 'Bentham', serif;
+  font-size: 12px;
+
+  /*kleur*/
+  color: var(--color-black-text);
 }
