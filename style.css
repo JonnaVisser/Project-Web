@@ -1,0 +1,990 @@
+/* CSS Document */
+/* html {
+  box-sizing:border-box;   */
+/* } */
+*, *::after, *::before {
+  box-sizing:border-box; 
+}
+:root {
+  --color-grey-text:#999;
+  --background-color:#f4f4f4;
+  --background-color-2:#404040;
+  --color-black-text:#2b2b2b;
+  --footer-color:#4d4d4d;
+  --full-menu-color:#858687;
+}
+
+/****************************************************FONTS****************************************************/
+
+/******************************************************ALGEMEEN************************************************/
+/***zorgt ervoor dat verborgen tekst bij een icoon verdwijnt***/
+ .text-visually-hidden { 
+  font-size: 0;
+  line-height: 0;
+  color: transparent; 
+}
+
+/***Gehele body style***/
+  body{
+  padding-top: 60px; /*zorgt ervoor dat de eerste foto onder de header begint*/ 
+  /* overflow: auto; een scroll bar wordt toegevoegd als een element niet helemaal zichtbaar kan zijn */
+  background: var(--background-color);
+  margin: 0;
+  /* display: block; */
+}
+
+/* body, button, input, select, textarea {
+  color:var(--background-color-2); 
+  font-size: 1em; 
+  line-height: 1.5s;
+} */
+
+/***Verwijderd bulletpoints voor li***/
+li {
+  /* list-style-position: initial; */
+  /* list-style-image: initial; */
+  list-style-type: none; 
+  /* display: list-item; */
+}
+
+/***Style a***/
+a{
+  text-decoration: none; /*verwijderd underline tekst*/
+  /* background-color: transparent; */
+  /* color:var(--color-grey-text); */
+}
+
+/* section {
+  display: block;
+} */
+
+/* ul {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+
+  list-style-position: initial;
+  list-style-image: initial;
+  list-style-type: disc;
+
+} */
+/* h2{
+  display: block; zorgt voor goede positie
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+} */
+
+
+
+/* p {
+  margin-bottom: 1.5em;
+
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+} */
+
+
+/* div {
+  display: block;
+} */
+/********************************************************HEADER************************************************/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  z-index: 9999;
+
+  background-color: var(--background-color);
+  padding: 10px 54px 10px 27px;
+}
+
+
+header > h1, 
+header > ul {
+  /*juiste witruimte bij logo*/  
+  margin:0; 
+}
+
+  
+
+  /***LOGO***/
+header h1 a{
+  /*maakt logo*/
+  background-image: url(https://readcereal.com/wp-content/themes/cereal/img/logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  /*positie logo in header*/
+  height: 50px;
+  width: 120px;
+
+
+  /*haalt tekst achter logo weg*/
+  text-indent: -999999px; 
+  display: inline-block;
+
+
+    /* position: relative; */
+}
+
+/***BLOK ICONEN RECHTS)***/
+header > ul {
+  /**FLEXBOX**/
+  display: flex;
+  gap: 0.5em;
+
+}
+
+/***STYLE ICONEN***/
+header > ul li a, header > ul li button {
+  /*juiste style en positie iconen*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+  display: block; 
+  padding: 16px;
+
+  /*haalt tekst achter iconen weg*/
+  text-indent:-999999px;
+
+  /*maakt hamburgemenu button zichtbaar in full-menu*/
+
+
+
+  /* height: 50px; */
+  /* outline: none; */
+  /* text-align: left; */
+}
+
+/***BUTTON HAMBURGERMENU***/
+header > ul li button {
+  /*maakt hamburgemenu button zichtbaar in full-menu*/
+  z-index: 10;
+  position: absolute;
+
+  
+  background-color: transparent;
+}
+
+/**ICON MY ACCOUNT**/
+header > ul li:nth-of-type(1) a { 
+  background-image: url(https://readcereal.com/wp-content/themes/cereal/img/account.svg);
+}
+
+/**ICON SEARCH**/
+header > ul li:nth-of-type(2) a {  
+  background-size: 11px;
+  background-image: url(https://readcereal.com/wp-content/themes/cereal/img/searchIcon.svg);
+}
+
+/**ICON MENU**/
+header > ul li:nth-of-type(3) button {  
+  border: none;
+  background-size: 17px;
+  background-image: url(https://readcereal.com/wp-content/themes/cereal/img/mMenu.svg);
+
+   /* zorg ervoor dat tekst weggaat en alleen icon zichtbaar is */
+}
+
+/***UITKLAPMENU***/
+header section {
+  /*laat uitklapmenu zien bij actie*/  
+  transform: translateX(100%);
+}
+
+/***ACTIE UITKLAPMENU***/
+.geopendMenu {
+  /*laat uitklapmenu zien bij actie*/  
+  transform: translateX(0%);
+}
+
+/***STYLE FULL-MENU***/
+.full-menu {
+  /*menu over hele pagina zichtbaar*/  
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  position:fixed;
+
+  /*kleur*/
+  background-color: var(--full-menu-color);
+
+  /* z-index: 5; */
+  /* overflow: scroll; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: flex-end; */
+}
+
+/***STYLE UL FULL-MENU***/
+.full-menu > ul {
+/*goede positie tekst*/
+  margin-top: 50px;
+
+
+  /* width: 100%; */
+  /* margin-right: 0%; */
+  /* margin-bottom: 30px; */
+  /* padding: 0 38px 0 38px; */
+  /* max-width: 1832px; */ 
+}
+
+/***STYLE LI FULL-MENU***/
+/* .full-menu > ul li {
+  color:gray;
+  list-style:none;
+
+} */
+
+/***STYLE A FULL-MENU***/
+.full-menu > ul li a {
+  /*kleur tekst*/
+  color: #f5f5f5;
+
+  /*grote letters*/
+  text-transform: uppercase;
+  
+  /*positie tekst*/
+  letter-spacing: 3px;
+  line-height: 1.9;
+  padding-bottom: 5px;
+
+  /*font*/
+  font-family: 'Bentham', serif;
+
+
+  /* text-decoration: none; */
+  /* border-bottom: 1px solid transparent; */
+}
+
+/***FOCUS STATE TEKST FULL-MENU***/
+.full-menu > ul li a a:focus {
+  color: var(--color-black-text);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+/***HOVER STATE TEKST FULL-MENU***/
+.full-menu > ul li a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  color: var(--color-grey-text);
+}
+
+/***ACTIVE STATE TEKST FULL-MENU***/
+.full-menu > ul li a:active {
+  color:var(--background-color);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+/*****************************************************MAIN***********************************************/
+
+main {
+padding:0;
+display: block;
+}
+
+/*******************EERSTE SECTION********************/
+
+/***WITRUIMTE EERSTE SECTION HOMEPAGE***/
+main > section:first-of-type {
+  /*PADDING*/
+  padding:0 20px 0 20px;
+
+
+  /*MARGIN*/
+  /* margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto; */
+  /* max-width: 1832px; */
+}
+
+/**HOME MENU**/
+main > section:first-of-type ul:nth-of-type(1) {
+  /*zorgt ervoor dat de tekst goed staat*/
+  text-align: right;
+  position: relative;
+
+  /*zorgt ervoor dat de afbeelding goed staat*/
+  margin-right: -3.2%;
+  padding: 0;
+
+
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/*HOME MENU LI*/
+main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) {
+  /*witruimte*/
+  margin-right: 4.5%;
+  margin-bottom: 40px;
+
+
+  /* flex-grow: 1; */
+  /* max-width: 100%; */
+  /* width: 95.5%; */
+  /* list-style: none; */
+}
+
+/***HOME MENU IMG***/
+main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) a:nth-of-type(1) img {
+  max-width: 100%; 
+  display:block;
+  /* width: 100%; */
+  /* filter: brightness(100%); */
+}
+
+/***HOME MENU TEKST***/
+main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) a:nth-of-type(2) {
+  /*witruimte*/
+  margin: 5px 0px 5px 0px;
+  display: block;
+  bottom:-30px;
+  width: calc(100% - 10px);
+  padding-bottom: 5px;
+  padding-top: 5px;
+
+  /*font*/
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  font-size: 16px;
+
+
+  /* writing-mode: horizontal-tb; */
+  /* right: auto; */
+  /* position: absolute; */
+  /* font-weight: 400; */
+}
+
+/***ARTIKELEN***/
+@media (max-width: 500px) {
+main > section:first-of-type {
+  padding:0 20px 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  main > section:first-of-type ul:nth-of-type(2) {
+    margin-top: 50px;
+    }
+  }
+
+@media (max-width: 600px) {
+  main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) {
+  margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 950px) {
+  main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 50px;
+  display: block;
+  }
+}
+
+@media (max-width: 950px) {
+  main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1),
+  ul:nth-of-type(2) li:nth-of-type(3), li:nth-of-type(7) {
+  margin-bottom: 0;
+  width: 63.16%;
+  flex-grow: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1),
+  ul:nth-of-type(2) li:nth-of-type(3), li:nth-of-type(7) {
+    width: 95.5%;
+    margin-right: 4.5%;
+    margin-bottom: 40px;
+    flex-grow: 2;
+  }
+}
+
+@media (max-width: 767px) {
+  main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1),
+  ul:nth-of-type(2) li:nth-of-type(3), li:nth-of-type(7) {
+    width: 95.5%;
+    margin-right: 4.5%;
+    margin-bottom: 40px;
+    flex-grow: 2;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  main > section:first-of-type .portrait {
+    width: 95.5%;
+    margin-right: 4.5%;
+    margin-bottom: 40px;
+    flex-grow: 1;
+    max-width: 100%;
+}
+  }
+
+  @media (max-width: 950px) {
+    main > section:first-of-type li.portrait {
+      width: 29.3%;
+      max-width: 100%;
+  }
+    }
+
+@media (max-width: 767px) {
+  main > section:first-of-type .portrait {
+    width: 44.5%;
+    margin-right: 4.5%;
+    flex-grow: 1;
+  }
+    }
+
+
+main > section:first-of-type ul:nth-of-type(2) {
+/*witruimte*/
+  padding: 0;
+  margin: 0 -3.2% 0 0;
+
+
+  /* opacity: 1; */
+  /*FLEXBOX*/
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/***LINKS ONDER AFBEELDINGEN*/
+main > section:first-of-type article {
+  line-height: 2;
+}
+
+/***LINKS ONDER AFBEELDINGEN*/
+main > section:first-of-type article a{
+  /*kleur*/
+  color:var(--color-black-text);
+
+  /*font*/
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+
+    /* font-weight: 400; */
+}
+
+/* main > section:first-of-type article a:first-of-type {
+  display: inline-block;
+} */
+
+/***STREEPJE TUSSEN DE LINKS***/
+main > section:first-of-type article a::after {
+  content:"|";
+  margin-left: 7px;
+  margin-right: 7px;
+  font-size: 16px;
+  color:var(--color-grey-text);
+  opacity: .8;
+  vertical-align: 1px;
+}
+
+/***VERWIJDEREN STREEPJE BIJ LAATSTE A***/
+main > section:first-of-type article a:last-child::after {
+  content: "";
+  margin-left: 0;
+}
+
+
+/***ARTIKELEN LI***/
+main > section:first-of-type ul:nth-of-type(2) li {
+  /*witruimte*/
+  margin-right: 4.5%;
+  margin-bottom: 40px;
+
+
+  /* flex-grow: 1;
+  max-width: 100%;  
+  width: 95.5%; */
+}
+
+/***ARTIKELEN IMAGES***/
+main > section:first-of-type ul:nth-of-type(2) li  img {
+  max-width: 100%;
+
+
+  display:block;
+}
+
+/***ARTIKELEN H2***/
+main > section:first-of-type ul:nth-of-type(2) li h2 {
+  /*witruimte*/
+  margin: 0 0 12px 0;
+  line-height: .9;
+
+  /*font*/
+  font-family: 'Bentham', serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  /* color: var(--color-black-text); */
+  /* text-size-adjust: 100%; */
+}
+
+
+/***ARTIKELEN H2-A***/
+main > section:first-of-type ul:nth-of-type(2) li h2 a {
+  color: var(--color-black-text);
+}
+
+/***ARTIKELEN P***/
+main > section:first-of-type ul:nth-of-type(2) li  p {
+  /*lijn breedte tekst*/
+  max-width: calc(100% - 10px); 
+
+  /*font*/
+  font-family: 'Bentham', serif;
+  font-size: 12px;
+
+  /*kleur*/
+  color: var(--color-black-text);
+}
+
+/**********UITZONDERINGEN ARTIKELEN***************/
+
+/**ARTIKEL 2 CAMALEONDA IN CALIFORNIA P**/
+main > section:first-of-type ul:nth-of-type(2) li:nth-of-type(2) p {
+  /*font*/
+  font-family: 'Bentham', serif;
+  font-size: 8px;
+  text-transform: uppercase;
+
+  /*kleur*/
+  color:var(--color-grey-text);
+
+
+  /* line-height: 1.9; */
+  /* margin-top: 10px; */
+  /* margin-bottom: 0; */
+  display: block;
+
+}
+
+/**ARTIKEL 4 RE-WRITINGRODIN P**/
+
+main > section:first-of-type ul:nth-of-type(2) li:nth-of-type(4) p {
+  /* max-width: calc(100% - 10px); */
+  /*font*/
+  font-family: 'Bentham', serif;
+  text-transform: uppercase;
+  font-size: 8px;
+
+  /*kleur*/
+  color:var(--color-grey-text);
+
+
+  /* opacity: 1; */
+  /* line-height: 1.9; */
+  /* margin-top: 10px;
+  /* margin-bottom: 0* */
+  display: block; 
+}
+
+
+/*******************TWEEDE SECTION********************/
+/***AFBEELDINGEN TWEEDE SECTION***/
+Main > section:last-child img {
+  max-width: 100%;
+
+
+  /* border:0; */
+  /* opacity: 1; */
+    /* height: auto; */
+}
+
+/***ACHTERGRONDKLEUR EN WITRUIMTE TWEEDE SECTION***/
+main > section:last-child{
+  /*achtergrondkleur*/
+  background-color:rgb(189,190,191);
+
+  /*witruimte*/
+  padding: 60px 27px;
+  margin:0%
+}
+
+/***STYLE UL TWEEDE SECTION*/
+main > section:last-child ul {
+  margin-bottom: 50px;
+  padding-left:0;
+
+  /* display: flex; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  /* text-align: left; */
+}
+
+/***H3 TWEEDE SECTION***/
+main > section:last-child ul:nth-of-type(1) h3 {
+  /*positie*/
+  margin-top: 10px;
+  max-width: 500px;
+
+  /*font*/
+  font-family: 'Bentham', serif;
+  letter-spacing: 4px;
+  font-weight: 400;
+  font-size: 34px;
+
+
+  display: block;
+  /* margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+}
+
+/***P TWEEDE SECTION***/
+main > section:last-child ul:nth-of-type(1) p {
+  /* padding-left: 0; */
+
+  /*font*/
+  font-family: 'Bentham', serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  /*kleur*/
+  color:var(--background-color-2);
+
+  /*positie*/
+  margin: 0 0 40px 0;
+  line-height: 1.7;
+  padding: 0 20px 0 0;
+
+  /*regellengte*/
+  max-width:90%;
+
+  /* display: block; */
+}
+
+/***A TWEEDE SECTION***/
+main > section:last-child ul:nth-of-type(1) a {
+  /*uiterlijk button shop*/
+  border: 1px solid var(--background-color-2); 
+  padding: 12px 24px 12px 24px;
+
+  /*kleur*/
+  color: var(--background-color-2);
+
+  /*font*/
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 9px;
+}
+
+/***LI TWEEDE SECTION***/
+main > section:last-of-type ul:nth-of-type(1) li  {
+  width: 100%;
+  text-align: left;
+  padding-left: 0;
+  margin-bottom: 40px;
+}
+
+/***H2 PRODUCTEN***/
+main > section:last-of-type h2 {
+  /*font*/
+  font-family: 'Bentham', serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 11px;
+
+  /*positie*/
+  padding-bottom: 6px;
+  padding-left: 2px;  
+  text-align: left;
+
+  /*kleur*/
+  color:#fff;
+
+
+  /* display: inline-block; */
+}
+
+/***UL PRODUCTEN***/
+/* main > section:last-of-type ul:nth-of-type(2) {
+  padding: 0;
+  margin: 0;
+
+
+
+  list-style: none;
+  clear: both;
+} */
+
+/***LI PRODUCTEN***/
+main > section:last-of-type ul:nth-of-type(2) li {
+  /* float:none; */
+  margin: 0 0 40px 0;
+  /* padding: 0; */
+  /* position: relative; */
+  /* width: 100%; */
+}
+
+/***A PRODUCTEN***/
+main > section:last-of-type ul:nth-of-type(2) li:nth-of-type(1) a {
+  /*font*/
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  /*kleur*/
+  color: #fff;
+
+  /*positie*/
+  margin-top: 5px;
+ 
+
+
+  /* display: block; */
+}
+
+/***IMG PRODUCTEN***/
+main > section:last-of-type ul:nth-of-type(2) img{
+width:100%;
+}
+
+/***H3 PRODUCTEN***/
+main > section:last-of-type ul:nth-of-type(2) h3 {
+  /*font*/
+  font-family: 'Bentham', serif;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+
+  /*positie*/
+  margin-bottom: 0;
+  border-bottom: 0px;
+  margin-top: 15px;
+  padding-bottom: 3px;
+  padding-left: 2px;
+
+  /*kleur*/
+  color:#fff;
+
+
+  /* display: inline-block; */
+}
+
+/***P PRODUCTEN***/
+main > section:last-of-type ul:nth-of-type(2) p {
+  /*font*/
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 8px;
+
+  /*kleur*/
+  color:gray;
+
+  /*positie*/
+  margin: 5px 0 5px 0;
+}
+
+/***SPAN PRODUCTEN***/
+main > section:last-of-type ul:nth-of-type(2) span {
+  /*font*/
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+
+  /*kleur*/
+  color:gray;
+
+
+  /* display: block; */
+    /* margin:0; */
+} 
+
+
+
+/*********************************************************FOOTER******************************************************/
+footer{
+  background-color: var(--footer-color);
+  color:gray;
+}
+
+/***WITRUIMTE FOOTER***/
+footer > section:nth-of-type(1) {
+  padding: 80px 37px 100px 37px;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  /* width: 100%; */
+  /* font-size: 14px; */
+  /* max-width: 1833px; */
+  /* margin: 0 auto 0 auto; */
+}
+
+/***POSITIE ABOUT TEKST***/
+footer > section:nth-of-type(1) article {
+  margin-bottom: 40px;
+  padding-right: 15%;
+}
+
+/***P ABOUT TEKST***/
+footer > section:nth-of-type(1) article p {
+  /*font*/
+  font-family: 'Bentham', serif;
+  /*positie*/
+  margin-bottom: 30px;
+
+
+/* margin-top: 0; */
+/* max-width: calc(100% - 10px); */
+/* line-height: 20px; */
+}
+
+/***A ABOUT TEKST***/
+footer > section:nth-of-type(1) article a {
+  /*positie*/
+  width: 60px;
+  max-height: 12px;
+
+  /*font*/
+  font-family: 'Bentham', serif;
+  text-transform: uppercase;
+
+  /*kleur*/
+  color: var(--color-grey-text);
+
+  /* vertical-align: -1px; */
+  /* overflow: hidden; */
+}
+
+/***SPAN NAVIGATIE***/
+footer > section:nth-of-type(1) span{
+  /*font*/
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 11px;
+
+
+  /* margin-top: 20px; */
+  /* display: block; */
+  /* margin-bottom: 15px; */
+}
+
+/***UL NAVIGATIE***/
+footer > section:nth-of-type(1) ul {
+  padding:0 40px 0 0px;
+  margin-bottom: 60px;
+}
+
+/***A NAVIGATIE***/
+footer > section:nth-of-type(1) ul li a {
+  /*font*/
+  font-family: 'Bentham', serif;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  line-height: 1.9;
+
+  /*positie*/
+  padding: 10px 0 10px 0;
+
+  /*kleur*/
+  color: #f5f5f5;
+
+  /* outline: none; */
+}
+
+/***FORM***/
+/* footer > section:nth-of-type(5) {
+  width: 100%;
+  text-align: left; 
+} */
+
+/* footer > section:nth-of-type(5) form {
+  white-space: nowrap;
+} */
+
+/***INPUT FORM***/
+input {
+  margin-top:21px;
+  margin-bottom: 21px;
+  background-color: transparent;
+  border-radius: 1px;
+  font-size: 12px;
+  color:#f5f5f5;
+  width: 150px;
+  padding: 5px 10px 5px 10px;
+  border-color:gray;
+  border:1px solid #999;
+}
+
+
+input#mc-embedded-subscribe-footer {
+  /*positie*/
+  width: 36px;
+  margin-left:-3px;
+
+  /*verwijderd tekst subscribe*/
+  text-indent: -99999px;
+
+
+  /* display: inline; */
+  /* height: 30px; */
+  /* background: 0 0; */
+  /* text-shadow:none; */
+  /* border-radius: 0; */
+  /* font-size:16px; */
+  /* background-image: */
+  /* background-repeat: no-repeat; */
+  /* background-size: 12px 12px 12px 12px; */
+  /* background-position: center center; */
+  /* vertical-align: -1px; */
+}
+
+/* footer > section:nth-of-type(6){
+  display:flex;
+  justify-content: flex-start;
+} */
+
+/***SOCIAL ICONEN***/
+.footer-social a{
+margin-right: 20px;
+}
