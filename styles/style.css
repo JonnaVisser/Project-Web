@@ -1,7 +1,4 @@
 /* CSS Document */
-/* html {
-  box-sizing:border-box;   */
-/* } */
 *, *::after, *::before {
   box-sizing:border-box; 
 }
@@ -14,123 +11,35 @@
   --full-menu-color:#858687;
 }
 
-/****************************************************FONTS****************************************************/
-@media (min-width:38em) { .landscape, .portrait { padding:3vw; } }
-@media (min-width:57em) { .landscape, .portrait { padding:2.5vw; } }
-
-main > section:first-of-type ul{
-    /* jouw code hier */
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
-    gap:1em;
-    grid-auto-flow: dense;
-  }
-
-  .landscape:first-child {
-    /* jouw code hier */
-    grid-column-start:1;
-    grid-column-end:-1;
-  }
-
-  .landscape {
-    /* jouw code hier */
-    
-    /* nb. niet nodig voor de eerste 3 sommetjes */
-    grid-column:span 2;
-    /* background-color:lightpink; */
-  
-  }
-  
-  .portrait {
-    /* jouw code hier */
-    grid-row:span 2;
-    /* background-color:lightblue; */
-    /* nb. niet nodig voor de eerste 3 sommetjes */
-  
-  }
 /******************************************************ALGEMEEN************************************************/
-/***zorgt ervoor dat verborgen tekst bij een icoon verdwijnt***/
- .text-visually-hidden { 
+/***ZORGT ERVOOR DAT VERBORGEN TEKST BIJ EEN ICOON VERDWIJNT***/
+.text-visually-hidden { 
   font-size: 0;
   line-height: 0;
   color: transparent; 
 }
 
-/***Gehele body style***/
-  body{
-  padding-top: 60px; /*zorgt ervoor dat de eerste foto onder de header begint*/ 
-  /* overflow: auto; een scroll bar wordt toegevoegd als een element niet helemaal zichtbaar kan zijn */
+/***GEHELE BODY STYLE***/
+body {
+  /*zorgt ervoor dat de eerste foto onder de header begint*/ 
+  padding-top: 60px;
+
   background: var(--background-color);
   margin: 0;
-  /* display: block; */
 }
 
-/* body, button, input, select, textarea {
-  color:var(--background-color-2); 
-  font-size: 1em; 
-  line-height: 1.5s;
-} */
-
-/***Verwijderd bulletpoints voor li***/
+/***VERWIJDERD BULLETPOINTS VOOR LI***/
 li {
-  /* list-style-position: initial; */
-  /* list-style-image: initial; */
   list-style-type: none; 
-  /* display: list-item; */
 }
 
-/***Style a***/
-a{
-  text-decoration: none; /*verwijderd underline tekst*/
-  /* background-color: transparent; */
-  /* color:var(--color-grey-text); */
+/***STYLE A***/
+a {
+  /*verwijderd underline tekst*/
+  text-decoration: none; 
 }
 
-/* section {
-  display: block;
-} */
-
-/* ul {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-
-  list-style-position: initial;
-  list-style-image: initial;
-  list-style-type: disc;
-
-} */
-/* h2{
-  display: block; zorgt voor goede positie
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-} */
-
-
-
-/* p {
-  margin-bottom: 1.5em;
-
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-} */
-
-
-/* div {
-  display: block;
-} */
 /********************************************************HEADER************************************************/
-
 header {
   display: flex;
   justify-content: space-between;
@@ -144,17 +53,14 @@ header {
   padding: 10px 54px 10px 27px;
 }
 
-
+  /***JUISTE WITRUIMTE BIJ LOGO***/
 header > h1, 
-header > ul {
-  /*juiste witruimte bij logo*/  
+header > ul {  
   margin:0; 
 }
 
-  
-
-  /***LOGO***/
-header h1 a{
+/***LOGO***/
+header h1 a {
   /*maakt logo*/
   background-image: url(https://readcereal.com/wp-content/themes/cereal/img/logo.svg);
   background-position: center;
@@ -165,21 +71,15 @@ header h1 a{
   height: 50px;
   width: 120px;
 
-
   /*haalt tekst achter logo weg*/
   text-indent: -999999px; 
   display: inline-block;
-
-
-    /* position: relative; */
 }
 
 /***BLOK ICONEN RECHTS)***/
 header > ul {
-  /**FLEXBOX**/
   display: flex;
   gap: 0.5em;
-
 }
 
 /***STYLE ICONEN***/
@@ -193,14 +93,6 @@ header > ul li a, header > ul li button {
 
   /*haalt tekst achter iconen weg*/
   text-indent:-999999px;
-
-  /*maakt hamburgemenu button zichtbaar in full-menu*/
-
-
-
-  /* height: 50px; */
-  /* outline: none; */
-  /* text-align: left; */
 }
 
 /***BUTTON HAMBURGERMENU***/
@@ -209,7 +101,6 @@ header > ul li button {
   z-index: 10;
   position: absolute;
 
-  
   background-color: transparent;
 }
 
@@ -229,19 +120,16 @@ header > ul li:nth-of-type(3) button {
   border: none;
   background-size: 17px;
   background-image: url(https://readcereal.com/wp-content/themes/cereal/img/mMenu.svg);
-
-   /* zorg ervoor dat tekst weggaat en alleen icon zichtbaar is */
 }
 
-/***UITKLAPMENU***/
-header section {
-  /*laat uitklapmenu zien bij actie*/  
+/********************************************UITKLAPMENU*****************************************************/
+/***LAAT UITKLAPMENU ZIEN BIJ ACTIE***/ 
+header section { 
   transform: translateX(100%);
 }
 
-/***ACTIE UITKLAPMENU***/
-.geopendMenu {
-  /*laat uitklapmenu zien bij actie*/  
+/***LAAT UITKLAPMENU ZIEN BIJ ACTIE***/
+.geopendMenu { 
   transform: translateX(0%);
 }
 
@@ -260,30 +148,13 @@ header section {
 
   z-index: 5;
   overflow: scroll;
-  display: flex;
-  flex-direction: column;
-  /* align-items: flex-end; */
 }
 
 /***STYLE UL FULL-MENU***/
 .full-menu > ul {
-/*goede positie tekst*/
+  /*goede positie tekst*/
   margin-top: 50px;
-
-
-  /* width: 100%; */
-  /* margin-right: 0%; */
-  /* margin-bottom: 30px; */
-  /* padding: 0 38px 0 38px; */
-  /* max-width: 1832px; */ 
 }
-
-/***STYLE LI FULL-MENU***/
-/* .full-menu > ul li {
-  color:gray;
-  list-style:none;
-
-} */
 
 /***STYLE A FULL-MENU***/
 .full-menu > ul li a {
@@ -300,10 +171,6 @@ header section {
 
   /*font*/
   font-family: 'Bentham', serif;
-
-
-  /* text-decoration: none; */
-  /* border-bottom: 1px solid transparent; */
 }
 
 /***FOCUS STATE TEKST FULL-MENU***/
@@ -329,32 +196,21 @@ header section {
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
-/*****************************************************MAIN***********************************************/
 
+/*****************************************************MAIN***********************************************/
 main {
 padding:0;
 display: block;
 }
 
-
-
 /*******************EERSTE SECTION********************/
-
 /***WITRUIMTE EERSTE SECTION HOMEPAGE***/
 main > section:first-of-type {
   /*PADDING*/
   padding:0 20px 0 20px;
-
-
-  /*MARGIN*/
-  /* margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto; */
-  /* max-width: 1832px; */
 }
 
-/**HOME MENU**/
+/**********************HOME MENU*********************/
 main > section:first-of-type ul:nth-of-type(1) {
   /*zorgt ervoor dat de tekst goed staat*/
   text-align: right;
@@ -363,11 +219,6 @@ main > section:first-of-type ul:nth-of-type(1) {
   /*zorgt ervoor dat de afbeelding goed staat*/
   margin-right: -3.2%;
   padding: 0;
-
-
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; */
 }
 
 /*HOME MENU LI*/
@@ -375,145 +226,45 @@ main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) {
   /*witruimte*/
   margin-right: 4.5%;
   margin-bottom: 40px;
-
-
-  /* flex-grow: 1; */
-  /* max-width: 100%; */
-  /* width: 95.5%; */
-  /* list-style: none; */
 }
 
-/***HOME MENU IMG***/
-main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) a:nth-of-type(1) img {
-  max-width: 100%; 
-  display:block;
-  /* width: 100%; */
-  /* filter: brightness(100%); */
-}
-
-/***HOME MENU TEKST***/
-main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) a:nth-of-type(2) {
+/***HOME MENU A***/
+main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) a:nth-of-type(1) {
   /*witruimte*/
-  margin: 5px 0px 5px 0px;
-  display: block;
-  bottom:-30px;
-  width: calc(100% - 10px);
   padding-bottom: 5px;
-  padding-top: 5px;
 
   /*font*/
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.9px;
   font-size: 16px;
-
-
-  /* writing-mode: horizontal-tb; */
-  /* right: auto; */
-  /* position: absolute; */
-  /* font-weight: 400; */
 }
 
-/***ARTIKELEN***/
-/* @media (max-width: 500px) {
-main > section:first-of-type {
-  padding:0 20px 0 20px;
-  }
+/***HOME MENU IMG***/
+main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) a:nth-of-type(1) img {
+  max-width: 100%; 
+  display:block;
 }
 
-@media (max-width: 600px) {
-  main > section:first-of-type ul:nth-of-type(2) {
-    margin-top: 50px;
-    }
-  }
 
-@media (max-width: 600px) {
-  main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) {
-  margin-bottom: 0px;
-  }
+/***********************ARTIKELEN*******************/
+main > section:first-of-type ul:nth-of-type(2) {
+  /*witruimte*/
+  padding: 0;
 }
 
-@media (min-width: 950px) {
-  main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 50px;
-  display: block;
-  }
+/***ARTIKELEN LI***/
+main > section:first-of-type ul:nth-of-type(2) li {
+  /*witruimte*/
+  margin-bottom: 40px;
+  max-width: 100%;  
 }
 
-@media (max-width: 950px) {
-  main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1),
-  ul:nth-of-type(2) li:nth-of-type(3), li:nth-of-type(7) {
-  margin-bottom: 0;
-  width: 63.16%;
-  flex-grow: 2;
-  }
+/***ARTIKELEN IMAGES***/
+main > section:first-of-type ul:nth-of-type(2) li  img {
+  max-width: 95%;
+  display:block;
 }
-
-@media (max-width: 500px) {
-  main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1),
-  ul:nth-of-type(2) li:nth-of-type(3), li:nth-of-type(7) {
-    width: 95.5%;
-    margin-right: 4.5%;
-    margin-bottom: 40px;
-    flex-grow: 2;
-  }
-}
-
-@media (min-width: 500px) {
-  main > section:first-of-type ul:nth-of-type(1) li:nth-of-type(1),
-  ul:nth-of-type(2) li:nth-of-type(3), li:nth-of-type(7) {
-    display:grid;
-  }
-}
-
-@media (max-width: 500px) {
-  main > section:first-of-type .portrait {
-    width: 95.5%;
-    margin-right: 4.5%;
-    margin-bottom: 40px;
-    flex-grow: 1;
-    max-width: 100%;
-}
-  }
-
-  @media (max-width: 950px) {
-    main > section:first-of-type li.portrait {
-      width: 29.3%;
-      max-width: 100%;
-  }
-    }
-
-@media (max-width: 767px) {
-  main > section:first-of-type .portrait {
-    width: 44.5%;
-    margin-right: 4.5%;
-    flex-grow: 1;
-  }
-    } */
-
-  @media screen and (max-width:500px) {
-    main > section:first-of-type ul:nth-of-type(2) {
-      /*witruimte*/
-        padding: 0;
-        margin: 0 -3.2% 0 0;
-      
-      
-        /* opacity: 1; */
-        /*FLEXBOX*/
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-  }
-
-  main > section:first-of-type ul:nth-of-type(2) {
-    /*witruimte*/
-      padding: 0;
-      margin: 0 -3.2% 0 0;
-  }
-
 
 /***LINKS ONDER AFBEELDINGEN*/
 main > section:first-of-type article {
@@ -521,7 +272,7 @@ main > section:first-of-type article {
 }
 
 /***LINKS ONDER AFBEELDINGEN*/
-main > section:first-of-type article a{
+main > section:first-of-type article a {
   /*kleur*/
   color:var(--color-black-text);
 
@@ -531,14 +282,7 @@ main > section:first-of-type article a{
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
-
-
-    /* font-weight: 400; */
 }
-
-/* main > section:first-of-type article a:first-of-type {
-  display: inline-block;
-} */
 
 /***STREEPJE TUSSEN DE LINKS***/
 main > section:first-of-type article a::after {
@@ -557,37 +301,6 @@ main > section:first-of-type article a:last-child::after {
   margin-left: 0;
 }
 
-
-/***ARTIKELEN LI***/
-main > section:first-of-type ul:nth-of-type(2) li {
-  /*witruimte*/
-  margin-right: 4.5%;
-  margin-bottom: 40px;
-
-
-  flex-grow: 1;
-  max-width: 100%;  
-  width: 95.5%;
-}
-
-/* .portrait {
-  flex-basis:10em;
-  flex-grow:1;
-}
-
-.landscape {
-  flex: basis 10em;
-  flex-grow:1;
-} */
-
-/***ARTIKELEN IMAGES***/
-main > section:first-of-type ul:nth-of-type(2) li  img {
-  max-width: 100%;
-
-
-  display:block;
-}
-
 /***ARTIKELEN H2***/
 main > section:first-of-type ul:nth-of-type(2) li h2 {
   /*witruimte*/
@@ -598,9 +311,6 @@ main > section:first-of-type ul:nth-of-type(2) li h2 {
   font-family: 'Bentham', serif;
   letter-spacing: 1px;
   font-size: 20px;
-
-  /* color: var(--color-black-text); */
-  /* text-size-adjust: 100%; */
 }
 
 
@@ -622,10 +332,10 @@ main > section:first-of-type ul:nth-of-type(2) li  p {
   color: var(--color-black-text);
 }
 
-/**********UITZONDERINGEN ARTIKELEN***************/
+/****************UITZONDERINGEN ARTIKELEN***************/
 
-/**ARTIKEL 2 CAMALEONDA IN CALIFORNIA P**/
-main > section:first-of-type ul:nth-of-type(2) li:nth-of-type(2) p {
+/**ARTIKEL 3 CAMALEONDA IN CALIFORNIA P**/
+main > section:first-of-type ul:nth-of-type(2) li:nth-of-type(3) p {
   /*font*/
   font-family: 'Bentham', serif;
   font-size: 8px;
@@ -633,19 +343,10 @@ main > section:first-of-type ul:nth-of-type(2) li:nth-of-type(2) p {
 
   /*kleur*/
   color:var(--color-grey-text);
-
-
-  /* line-height: 1.9; */
-  /* margin-top: 10px; */
-  /* margin-bottom: 0; */
-  display: block;
-
 }
 
 /**ARTIKEL 4 RE-WRITINGRODIN P**/
-
 main > section:first-of-type ul:nth-of-type(2) li:nth-of-type(4) p {
-  /* max-width: calc(100% - 10px); */
   /*font*/
   font-family: 'Bentham', serif;
   text-transform: uppercase;
@@ -653,29 +354,11 @@ main > section:first-of-type ul:nth-of-type(2) li:nth-of-type(4) p {
 
   /*kleur*/
   color:var(--color-grey-text);
-
-
-  /* opacity: 1; */
-  /* line-height: 1.9; */
-  /* margin-top: 10px;
-  /* margin-bottom: 0* */
-  display: block; 
 }
 
-
-/*******************TWEEDE SECTION********************/
-/***AFBEELDINGEN TWEEDE SECTION***/
-Main > section:last-child img {
-  max-width: 100%;
-
-
-  /* border:0; */
-  /* opacity: 1; */
-    /* height: auto; */
-}
-
+/*********************TWEEDE SECTION***********************/
 /***ACHTERGRONDKLEUR EN WITRUIMTE TWEEDE SECTION***/
-main > section:last-child{
+main > section:last-child {
   /*achtergrondkleur*/
   background-color:rgb(189,190,191);
 
@@ -688,11 +371,14 @@ main > section:last-child{
 main > section:last-child ul {
   margin-bottom: 50px;
   padding-left:0;
+}
 
-  /* display: flex; */
-  /* justify-content: center; */
-  /* flex-wrap: wrap; */
-  /* text-align: left; */
+/***LI TWEEDE SECTION***/
+main > section:last-of-type ul:nth-of-type(1) li  {
+  width: 100%;
+  text-align: left;
+  padding-left: 0;
+  margin-bottom: 40px;
 }
 
 /***H3 TWEEDE SECTION***/
@@ -707,18 +393,11 @@ main > section:last-child ul:nth-of-type(1) h3 {
   font-weight: 400;
   font-size: 34px;
 
-
   display: block;
-  /* margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px; */
 }
 
 /***P TWEEDE SECTION***/
 main > section:last-child ul:nth-of-type(1) p {
-  /* padding-left: 0; */
-
   /*font*/
   font-family: 'Bentham', serif;
   font-size: 12px;
@@ -735,8 +414,6 @@ main > section:last-child ul:nth-of-type(1) p {
 
   /*regellengte*/
   max-width:90%;
-
-  /* display: block; */
 }
 
 /***A TWEEDE SECTION***/
@@ -757,12 +434,9 @@ main > section:last-child ul:nth-of-type(1) a {
   font-size: 9px;
 }
 
-/***LI TWEEDE SECTION***/
-main > section:last-of-type ul:nth-of-type(1) li  {
-  width: 100%;
-  text-align: left;
-  padding-left: 0;
-  margin-bottom: 40px;
+/***AFBEELDINGEN TWEEDE SECTION***/
+Main > section:last-child img {
+  max-width: 100%;
 }
 
 /***H2 PRODUCTEN***/
@@ -781,29 +455,11 @@ main > section:last-of-type h2 {
 
   /*kleur*/
   color:#fff;
-
-
-  /* display: inline-block; */
 }
-
-/***UL PRODUCTEN***/
-/* main > section:last-of-type ul:nth-of-type(2) {
-  padding: 0;
-  margin: 0;
-
-
-
-  list-style: none;
-  clear: both;
-} */
 
 /***LI PRODUCTEN***/
 main > section:last-of-type ul:nth-of-type(2) li {
-  /* float:none; */
   margin: 0 0 40px 0;
-  /* padding: 0; */
-  /* position: relative; */
-  /* width: 100%; */
 }
 
 /***A PRODUCTEN***/
@@ -819,14 +475,10 @@ main > section:last-of-type ul:nth-of-type(2) li:nth-of-type(1) a {
 
   /*positie*/
   margin-top: 5px;
- 
-
-
-  /* display: block; */
 }
 
 /***IMG PRODUCTEN***/
-main > section:last-of-type ul:nth-of-type(2) img{
+main > section:last-of-type ul:nth-of-type(2) img {
 width:100%;
 }
 
@@ -848,9 +500,6 @@ main > section:last-of-type ul:nth-of-type(2) h3 {
 
   /*kleur*/
   color:#fff;
-
-
-  /* display: inline-block; */
 }
 
 /***P PRODUCTEN***/
@@ -879,16 +528,10 @@ main > section:last-of-type ul:nth-of-type(2) span {
 
   /*kleur*/
   color:gray;
-
-
-  /* display: block; */
-    /* margin:0; */
 } 
 
-
-
 /*********************************************************FOOTER******************************************************/
-footer{
+footer {
   background-color: var(--footer-color);
   color:gray;
 }
@@ -898,12 +541,6 @@ footer > section:nth-of-type(1) {
   padding: 80px 37px 100px 37px;
   display: flex;
   flex-wrap: wrap;
-
-
-  /* width: 100%; */
-  /* font-size: 14px; */
-  /* max-width: 1833px; */
-  /* margin: 0 auto 0 auto; */
 }
 
 /***POSITIE ABOUT TEKST***/
@@ -918,11 +555,6 @@ footer > section:nth-of-type(1) article p {
   font-family: 'Bentham', serif;
   /*positie*/
   margin-bottom: 30px;
-
-
-/* margin-top: 0; */
-/* max-width: calc(100% - 10px); */
-/* line-height: 20px; */
 }
 
 /***A ABOUT TEKST***/
@@ -937,24 +569,16 @@ footer > section:nth-of-type(1) article a {
 
   /*kleur*/
   color: var(--color-grey-text);
-
-  /* vertical-align: -1px; */
-  /* overflow: hidden; */
 }
 
 /***SPAN NAVIGATIE***/
-footer > section:nth-of-type(1) span{
+footer > section:nth-of-type(1) span {
   /*font*/
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 400;
   font-size: 11px;
-
-
-  /* margin-top: 20px; */
-  /* display: block; */
-  /* margin-bottom: 15px; */
 }
 
 /***UL NAVIGATIE***/
@@ -977,19 +601,7 @@ footer > section:nth-of-type(1) ul li a {
 
   /*kleur*/
   color: #f5f5f5;
-
-  /* outline: none; */
 }
-
-/***FORM***/
-/* footer > section:nth-of-type(5) {
-  width: 100%;
-  text-align: left; 
-} */
-
-/* footer > section:nth-of-type(5) form {
-  white-space: nowrap;
-} */
 
 /***INPUT FORM***/
 input {
@@ -1011,50 +623,31 @@ input#mc-embedded-subscribe-footer {
   width: 36px;
   margin-left:-3px;
 
+  /*arrow*/
+  background-image: url(https://readcereal.com/wp-content/themes/cereal/img/arrowRight.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+
   /*verwijderd tekst subscribe*/
   text-indent: -99999px;
-
-
-  /* display: inline; */
-  /* height: 30px; */
-  /* background: 0 0; */
-  /* text-shadow:none; */
-  /* border-radius: 0; */
-  /* font-size:16px; */
-  /* background-image: */
-  /* background-repeat: no-repeat; */
-  /* background-size: 12px 12px 12px 12px; */
-  /* background-position: center center; */
-  /* vertical-align: -1px; */
 }
-
-/* footer > section:nth-of-type(6){
-  display:flex;
-  justify-content: flex-start;
-} */
 
 /***SOCIAL ICONEN***/
 .footer-social a{
 margin-right: 20px;
 }
 
-
-
-
-
 /*********************************************************TWEEDE PAGINA MAIN******************************************************/
 /***WITRUIMTE GEHELE MAIN***/
 .travelpagina {
   padding:0 20px 0 20px;
 }
+
 /***TRAVELPAGINA MAIN UL***/
 .travelpagina > ul {
   padding: 0;
   margin: 0 -3.2% 0 0; 
-
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 /***TRAVELPAGINA MAIN LI***/
@@ -1067,8 +660,6 @@ margin-bottom: 40px;
 /***TRAVELPAGINA MAIN IMAGES***/
 .travelpagina > ul li img {
   max-width: 100%;
-
-
   display:block;
 }
 
@@ -1089,8 +680,9 @@ margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-  /***STREEPJE TUSSEN DE LINKS***/
-  .travelpagina > ul li article a::after {
+
+/***STREEPJE TUSSEN DE LINKS***/
+.travelpagina > ul li article a::after {
   content:"|";
   margin-left: 7px;
   margin-right: 7px;
@@ -1116,9 +708,6 @@ margin-bottom: 40px;
   font-family: 'Bentham', serif;
   letter-spacing: 1px;
   font-size: 20px;
-
-  /* color: var(--color-black-text); */
-  /* text-size-adjust: 100%; */
 }
 
 /***TRAVELPAGINA MAIN H2-A***/
@@ -1137,4 +726,118 @@ margin-bottom: 40px;
 
   /*kleur*/
   color: var(--color-black-text);
+}
+
+/****************UITZONDERINGEN MAIN***************/
+/***LI 3 KEPLER TRACK - WITRUIMTE H2 EN AFBEELDING**/
+.travelpagina > ul li:nth-of-type(3) h2 {
+  padding-top: 35px;
+}
+
+/***LI 7 LIFE IN VALPARAISO - WITRUIMTE H2 EN AFBEELDING**/
+.travelpagina > ul li:nth-of-type(7) h2 {
+  padding-top: 35px;
+}
+
+/****************************************************RESPONSIVE****************************************************/
+/***GRID***/
+@media screen and (min-width:480px) {
+  main > section:first-of-type ul, .travelpagina > ul, main > section:last-of-type ul:nth-of-type(2) {
+    display:grid;
+    grid-template-columns:100px 100px 100px;
+    grid-template-columns: repeat( auto-fit, minmax(254px, 1fr) );
+    grid-gap:10px;
+    grid-auto-flow: dense;  
+  }
+
+  main > section:first-of-type ul{
+    padding: 0 0 0 27px !important;
+  }
+}
+
+/***TABLET***/
+@media screen and (min-width:480px) and (max-width:767px) {
+  .landscape {
+    grid-column:span 2;
+  }
+
+  .portrait:nth-of-type(9) {
+    grid-column:span 2;
+  }
+
+  .portrait:nth-of-type(8) {
+    grid-column: span 2;
+  }
+}
+
+/***DESKTOP KLEIN***/
+@media screen and (min-width:768px) and (max-width:1129px) {
+  .landscape {
+    grid-column:span 2;
+  }
+  
+  .landscape:nth-of-type(9) {
+    grid-column:span 3;
+  }
+
+  /*main tweede section - afbeelding recht en tekst links*/
+  main > section:last-of-type ul:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    flex-direction:row-reverse; 
+    margin-bottom: 30px; 
+  }
+
+  /*main tweede section - witruimte tussen afbeelding en tekst*/
+  main > section:last-of-type ul:nth-of-type(1) li:nth-of-type(1) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/***DESKTOP GROOT***/
+@media screen and (min-width:1130px) {
+  .landscape {
+    grid-column:span 2;
+  }
+
+  .portrait:nth-of-type(9) {
+    grid-column:span 1;
+  }
+
+  /*verticale tekst home menu*/
+  main> section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) span:nth-of-type(1) {
+    writing-mode: vertical-lr;
+    position: absolute;
+    bottom:0;
+    margin-bottom: 40px;
+  }
+
+  /*positie home menu tekst en afbeelding*/
+  main> section:first-of-type ul:nth-of-type(1) li:nth-of-type(1) {
+    width: 63.16%;
+  }
+
+  /*main tweede section - afbeelding recht en tekst links*/
+  main > section:last-of-type ul:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    flex-direction:row-reverse; 
+    margin-bottom: 30px; 
+  }
+
+  /*main tweede section - witruimte tussen afbeelding en tekst*/
+  main > section:last-of-type ul:nth-of-type(1) li:nth-of-type(1) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  /* .full-menu {
+    transform: none;
+    background-color:transparent!important;
+    }
+    
+    .full-menu ul li a{
+    color: black!important;
+    } */
 }

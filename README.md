@@ -40,11 +40,11 @@ Responsive
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 Homepage  
-<img src="/images/homepagina-mobile-device.png">
+<img src="./images/proces/homepagina-mobile-device.png">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 Travelpage  
-<img src="/images/proces/travelpagina-mobile-device.png">
+<img src="./images/proces/travelpagina-mobile-device.png">
  
 </details>
 
@@ -56,16 +56,16 @@ Travelpage
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="/images/proces/breakdownschets-homepage-1.jpg" width="375px" alt="breakdown van de hele pagina 1">
-<img src="/images/proces/breakdownschets-homepage-2.jpg" width="375px" alt="breakdown van de hele pagina 2">
-<img src="/images/proces/breakdownschets-homepage-3.jpg" width="375px" alt="breakdown van de hele pagina 3">
-<img src="/images/proces/breakdownschets-homepage-4.jpg" width="375px" alt="breakdown van de hele pagina 4">
-<img src="/images/proces/breakdownschets-homepage-5.jpg" width="375px" alt="breakdown van de hele pagina 5">
-<img src="/images/proces/breakdownschets-homepage-6.jpg" width="375px" alt="breakdown van de hele pagina 6">
-<img src="/images/proces/breakdownschets-homepage-7.jpg" width="375px" alt="breakdown van de hele pagina 7">
+<img src="./images/proces/breakdownschets-homepage-1.jpg" width="375px" alt="breakdown van de hele pagina 1">
+<img src="./images/proces/breakdownschets-homepage-2.jpg" width="375px" alt="breakdown van de hele pagina 2">
+<img src="./images/proces/breakdownschets-homepage-3.jpg" width="375px" alt="breakdown van de hele pagina 3">
+<img src="./images/proces/breakdownschets-homepage-4.jpg" width="375px" alt="breakdown van de hele pagina 4">
+<img src="./images/proces/breakdownschets-homepage-5.jpg" width="375px" alt="breakdown van de hele pagina 5">
+<img src="./images/proces/breakdownschets-homepage-6.jpg" width="375px" alt="breakdown van de hele pagina 6">
+<img src="./images/proces/breakdownschets-homepage-7.jpg" width="375px" alt="breakdown van de hele pagina 7">
 
 ### dynamisch deel (bijv menu): 
-<img src="/images/proces/breakdownschets-menu.jpg" width="375px" alt="breakdown van een dynamisch deel">
+<img src="./images/proces/breakdownschets-menu.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter): 
 
