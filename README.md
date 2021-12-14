@@ -121,8 +121,8 @@ de transition die op de orginele website veel wordt gebruikt snap ik niet.
 HTML is ingevuld voor homepage en menu(aparte pagina). 
 De eerste stappen in CSS heb ik gedaan.
 
-<img src="/images/proces/eerste-stappen-css.jpg" width="375px" alt="eerste stappen css">
 Eerste stappen CSS
+<img src="/images/proces/eerste-stappen-css.jpg" width="375px" alt="eerste stappen css">
 <img src="/images/html-hamburgermenu-code.jpg" width="375px" alt="html hamburgermenu code">
 <img src="/images/html-hamburgermenu-website.jpg" width="375px" alt="html hamburgmenu code">
 
