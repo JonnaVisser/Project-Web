@@ -40,11 +40,11 @@ Responsive
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 Homepage  
-<img src="./images/proces/homepagina-mobile-device.png">
+<img src="/images/proces/homepagina-mobile-device.png">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 Travelpage  
-<img src="./images/proces/travelpagina-mobile-device.png">
+<img src="/images/proces/travelpagina-mobile-device.png">
  
 </details>
 
@@ -56,16 +56,16 @@ Travelpage
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="./images/proces/breakdownschets-homepage-1.jpg" width="375px" alt="breakdown van de hele pagina 1">
-<img src="./images/proces/breakdownschets-homepage-2.jpg" width="375px" alt="breakdown van de hele pagina 2">
-<img src="./images/proces/breakdownschets-homepage-3.jpg" width="375px" alt="breakdown van de hele pagina 3">
-<img src="./images/proces/breakdownschets-homepage-4.jpg" width="375px" alt="breakdown van de hele pagina 4">
-<img src="./images/proces/breakdownschets-homepage-5.jpg" width="375px" alt="breakdown van de hele pagina 5">
-<img src="./images/proces/breakdownschets-homepage-6.jpg" width="375px" alt="breakdown van de hele pagina 6">
-<img src="./images/proces/breakdownschets-homepage-7.jpg" width="375px" alt="breakdown van de hele pagina 7">
+<img src="/images/proces/breakdownschets-homepage-1.jpg" width="375px" alt="breakdown van de hele pagina 1">
+<img src="/images/proces/breakdownschets-homepage-2.jpg" width="375px" alt="breakdown van de hele pagina 2">
+<img src="/images/proces/breakdownschets-homepage-3.jpg" width="375px" alt="breakdown van de hele pagina 3">
+<img src="/images/proces/breakdownschets-homepage-4.jpg" width="375px" alt="breakdown van de hele pagina 4">
+<img src="/images/proces/breakdownschets-homepage-5.jpg" width="375px" alt="breakdown van de hele pagina 5">
+<img src="/images/proces/breakdownschets-homepage-6.jpg" width="375px" alt="breakdown van de hele pagina 6">
+<img src="/images/proces/breakdownschets-homepage-7.jpg" width="375px" alt="breakdown van de hele pagina 7">
 
 ### dynamisch deel (bijv menu): 
-<img src="./images/proces/breakdownschets-menu.jpg" width="375px" alt="breakdown van een dynamisch deel">
+<img src="/images/proces/breakdownschets-menu.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter): 
 
@@ -121,7 +121,7 @@ de transition die op de orginele website veel wordt gebruikt snap ik niet.
 HTML is ingevuld voor homepage en menu(aparte pagina). 
 De eerste stappen in CSS heb ik gedaan.
 
-<img src="./images/proces/eerste-stappen-css.jpg" width="375px" alt="eerste stappen css">
+<img src="/images/proces/eerste-stappen-css.jpg" width="375px" alt="eerste stappen css">
 Eerste stappen CSS
 <img src="/images/html-hamburgermenu-code.jpg" width="375px" alt="html hamburgermenu code">
 <img src="/images/html-hamburgermenu-website.jpg" width="375px" alt="html hamburgmenu code">
