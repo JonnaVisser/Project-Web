@@ -40,11 +40,11 @@ Responsive
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 Homepage  
-<img src="/images/Homepage.jpg" width="375px" alt="Homepage">
+<img src="./images/proces/homepagina-mobile-device.png">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 Travelpage  
-<img src="/images/Travelpage.jpg" width="375px" alt="Tavelpage">
+<img src="./images/proces/travelpagina-mobile-device.png">
  
 </details>
 
@@ -56,16 +56,16 @@ Travelpage
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="/images/breakdownschets-%20homepage-1.jpg" width="375px" alt="breakdown van de hele pagina 1">
-<img src="/images/breakdownschets-homepage-2.jpg" width="375px" alt="breakdown van de hele pagina 2">
-<img src="/images/breakdownschets-homepage-3.jpg" width="375px" alt="breakdown van de hele pagina 3">
-<img src="/images/breakdownschets-homepage-4.jpg" width="375px" alt="breakdown van de hele pagina 4">
-<img src="/images/breakdownschets-homepage-5.jpg" width="375px" alt="breakdown van de hele pagina 5">
-<img src="/images/breakdownschets-homepage-6.jpg" width="375px" alt="breakdown van de hele pagina 6">
-<img src="/images/breakdownschets-homepage-7.jpg" width="375px" alt="breakdown van de hele pagina 7">
+<img src="./images/proces/breakdownschets-homepage-1.jpg" width="375px" alt="breakdown van de hele pagina 1">
+<img src="./images/proces/breakdownschets-homepage-2.jpg" width="375px" alt="breakdown van de hele pagina 2">
+<img src="./images/proces/breakdownschets-homepage-3.jpg" width="375px" alt="breakdown van de hele pagina 3">
+<img src="./images/proces/breakdownschets-homepage-4.jpg" width="375px" alt="breakdown van de hele pagina 4">
+<img src="./images/proces/breakdownschets-homepage-5.jpg" width="375px" alt="breakdown van de hele pagina 5">
+<img src="./images/proces/breakdownschets-homepage-6.jpg" width="375px" alt="breakdown van de hele pagina 6">
+<img src="./images/proces/breakdownschets-homepage-7.jpg" width="375px" alt="breakdown van de hele pagina 7">
 
 ### dynamisch deel (bijv menu): 
-<img src="/images/breakdownschets-menu.jpg" width="375px" alt="breakdown van een dynamisch deel">
+<img src="./images/proces/breakdownschets-menu.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter): 
 
@@ -121,7 +121,8 @@ de transition die op de orginele website veel wordt gebruikt snap ik niet.
 HTML is ingevuld voor homepage en menu(aparte pagina). 
 De eerste stappen in CSS heb ik gedaan.
 
-<img src="/images/eerste-stappen-css.jpg" width="375px" alt="eerste stappen css">
+<img src="./images/proces/eerste-stappen-css.jpg" width="375px" alt="eerste stappen css">
+Eerste stappen CSS
 <img src="/images/html-hamburgermenu-code.jpg" width="375px" alt="html hamburgermenu code">
 <img src="/images/html-hamburgermenu-website.jpg" width="375px" alt="html hamburgmenu code">
 
@@ -287,5 +288,19 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 3. bron 3 https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
 4. bron 4 https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
 5. bron 5 (Kruisje hamburgermenu) https://readcereal.com/wp-content/themes/cereal/img/closeWhite.svg
+6. https://codepen.io/deannabosschert/pen/YzrXGeO (voorbeeld formulier Deanna)
+7. https://www.w3schools.com/tags/ref_pxtoemconversion.asp (em omrekenen naar px)
+8. https://gridbyexample.com/examples/(grid voorbeelden)
+9. https://css-tricks.com/introduction-fr-css-unit/(grid voorbeelden)
+10. https://codepen.io/your-work/ (voorbeelden codepen)
+12. https://webdesign.tutsplus.com/tutorials/use-the-lang-attribute-for-better-accessibility--cms-31961(taal html)
+13. https://fonts.google.com/specimen/Oswald (oswald font)
+14. https://fonts.google.com/specimen/Bentham (bentham font)
+15. https://www.w3schools.com/tags/tag_span.asp (uitleg span tag)
+16. https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity (wie is de koning)
+17. https://www.w3schools.com/cssref/pr_class_display.asp (display property)
+18. https://www.w3schools.com/cssref/pr_pos_overflow.asp (overflow property)
+19. https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow (box shadow)
+20. https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration (text decoration)
 
 </details>
