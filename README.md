@@ -40,7 +40,7 @@ Responsive
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 Homepage  
-<img src="/images/proces/homepagina-mobile-device.png">
+<img src="/images/homepagina-mobile-device.png">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 Travelpage  
